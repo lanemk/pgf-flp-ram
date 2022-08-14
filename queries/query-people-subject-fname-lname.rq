@@ -1,0 +1,14 @@
+# people list: subject, first name, family name, order by
+
+
+PREFIX flp: <https://flp.example.org/>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?s ?first_name ?family_name 
+WHERE {
+    ?s a schema:Person ;
+       foaf:firstName ?first_name ;
+       foaf:family_name ?family_name .
+} 
+ORDER BY ?family_name

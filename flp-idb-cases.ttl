@@ -1,0 +1,207 @@
+@prefix : <https://flp.example.org/case#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix flp: <https://flp.example.org/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@base <https://flp.example.org/case#> .
+
+<https://flp.example.org/case#> rdf:type owl:Ontology, dctype:Dataset ;
+                                   owl:imports flp: ;
+                                   dcterms:description "Dataset sample of the Free Law Project" ;    
+                                   vann:preferredNamespacePrefix  "case" ;
+                                   vann:preferredNamespaceUri     "https://flp.example.org/case#" .
+
+###  https://flp.example.org/case#
+<https://flp.example.org/case#> rdf:type owl:NamedIndividual ,
+                                           dctype:Dataset .
+
+###  http://purl.org/dc/dcmitype/Dataset
+dctype:Dataset rdf:type owl:Class .
+
+
+:case-26368182  flp:plaintiff    "BELL" ;
+        flp:resource_uri         <https://www.courtlistener.com/api/rest/v3/fjc-integrated-database/26368182/> ;
+        flp:dataset_source       "9"^^xsd:integer ;
+        flp:county_of_residence  "13271"^^xsd:integer ;
+        flp:docket_number        "2000074"^^xsd:integer ;
+        flp:title                "15"^^xsd:integer ;
+        flp:jurisdiction         "3"^^xsd:integer ;
+        flp:defendant            "EQUIFAX INFORMATION SER, ET AL" ;
+        flp:pro_se               "0"^^xsd:boolean ;
+        flp:section              "1681"^^xsd:integer ;
+        rdf:type                 flp:FJC_IDB_Resource ;
+        flp:nature_of_suit       "480"^^xsd:integer ;
+        flp:office               "3"^^xsd:integer ;
+        flp:year_of_tape         "2099"^^xsd:integer ;
+        flp:district             <https://www.courtlistener.com/api/rest/v3/courts/gasd/> ;
+        flp:monetary_demand      "0"^^xsd:boolean ;
+        dcterms:created          "2022-01-28T23:50:17Z"^^xsd:dateTime ;
+        flp:circuit              <https://www.courtlistener.com/api/rest/v3/courts/ca11/> ;
+        flp:date_filed           "2020-10-28T00:00Z"^^xsd:dateTime ;
+        flp:origin               "1"^^xsd:integer ;
+        dcterms:modified         "2022-01-28T23:50:17Z"^^xsd:dateTime .
+
+:case-26368389  dcterms:created  "2022-01-28T23:50:28Z"^^xsd:dateTime ;
+        flp:circuit              <https://www.courtlistener.com/api/rest/v3/courts/ca11/> ;
+        rdf:type                 flp:FJC_IDB_Resource ;
+        flp:title                "15"^^xsd:integer ;
+        flp:year_of_tape         "2099"^^xsd:integer ;
+        flp:section              "1692"^^xsd:integer ;
+        flp:county_of_residence  "13051"^^xsd:integer ;
+        flp:origin               "1"^^xsd:integer ;
+        flp:defendant            "DEAN J. ANDERSON GROUP INC" ;
+        dcterms:modified         "2022-01-28T23:50:28Z"^^xsd:dateTime ;
+        flp:resource_uri         <https://www.courtlistener.com/api/rest/v3/fjc-integrated-database/26368389/> ;
+        flp:docket_number        "2000300"^^xsd:integer ;
+        flp:dataset_source       "9"^^xsd:integer ;
+        flp:district             <https://www.courtlistener.com/api/rest/v3/courts/gasd/> ;
+        flp:jurisdiction         "3"^^xsd:integer ;
+        flp:nature_of_suit       "480"^^xsd:integer ;
+        flp:date_filed           "2020-12-01T00:00Z"^^xsd:dateTime ;
+        flp:pro_se               "0"^^xsd:boolean ;
+        flp:plaintiff            "MCCLOUD" ;
+        flp:office               "4"^^xsd:integer ;
+        flp:monetary_demand      "0"^^xsd:boolean .
+
+:case-26368519  dcterms:modified  "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:circuit              <https://www.courtlistener.com/api/rest/v3/courts/ca11/> ;
+        flp:county_of_residence  "13051"^^xsd:integer ;
+        flp:resource_uri         <https://www.courtlistener.com/api/rest/v3/fjc-integrated-database/26368519/> ;
+        flp:docket_number        "2100102"^^xsd:integer ;
+        flp:plaintiff            "WOOD" ;
+        flp:district             <https://www.courtlistener.com/api/rest/v3/courts/gasd/> ;
+        flp:office               "4"^^xsd:integer ;
+        flp:nature_of_suit       "480"^^xsd:integer ;
+        flp:dataset_source       "9"^^xsd:integer ;
+        flp:origin               "2"^^xsd:integer ;
+        rdf:type                 flp:FJC_IDB_Resource ;
+        flp:monetary_demand      "0"^^xsd:boolean ;
+        dcterms:created          "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:pro_se               "0"^^xsd:boolean ;
+        flp:jurisdiction         "3"^^xsd:integer ;
+        flp:defendant            "LANIER COLLECTION AGENC, ET AL" ;
+        flp:title                "15"^^xsd:integer ;
+        flp:year_of_tape         "2099"^^xsd:integer ;
+        flp:date_filed           "2021-04-09T00:00Z"^^xsd:dateTime ;
+        flp:section              "1692"^^xsd:integer .
+
+:case-26368533  rdf:type         flp:FJC_IDB_Resource ;
+        flp:nature_of_suit       "480"^^xsd:integer ;
+        dcterms:created          "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:year_of_tape         "2099"^^xsd:integer ;
+        flp:monetary_demand      "0"^^xsd:boolean ;
+        flp:section              "1681"^^xsd:integer ;
+        flp:dataset_source       "9"^^xsd:integer ;
+        flp:county_of_residence  "13051"^^xsd:integer ;
+        flp:title                "15"^^xsd:integer ;
+        flp:defendant            "TRANS UNION, LLC, ET AL" ;
+        flp:origin               "1"^^xsd:integer ;
+        flp:plaintiff            "MEADOWS" ;
+        flp:pro_se               "0"^^xsd:boolean ;
+        flp:office               "4"^^xsd:integer ;
+        flp:docket_number        "2100116"^^xsd:integer ;
+        flp:district             <https://www.courtlistener.com/api/rest/v3/courts/gasd/> ;
+        flp:circuit              <https://www.courtlistener.com/api/rest/v3/courts/ca11/> ;
+        flp:jurisdiction         "3"^^xsd:integer ;
+        dcterms:modified         "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:resource_uri         <https://www.courtlistener.com/api/rest/v3/fjc-integrated-database/26368533/> ;
+        flp:date_filed           "2021-04-16T00:00Z"^^xsd:dateTime .
+
+:case-26368529  flp:circuit      <https://www.courtlistener.com/api/rest/v3/courts/ca11/> ;
+        rdf:type                 flp:FJC_IDB_Resource ;
+        flp:office               "4"^^xsd:integer ;
+        flp:title                "15"^^xsd:integer ;
+        flp:county_of_residence  "13051"^^xsd:integer ;
+        dcterms:modified         "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:dataset_source       "9"^^xsd:integer ;
+        flp:monetary_demand      "1"^^xsd:boolean ;
+        flp:pro_se               "0"^^xsd:boolean ;
+        flp:plaintiff            "WILLIAMS" ;
+        flp:origin               "1"^^xsd:integer ;
+        flp:defendant            "PROFIT SERVICES GROUP LLC" ;
+        flp:district             <https://www.courtlistener.com/api/rest/v3/courts/gasd/> ;
+        flp:year_of_tape         "2099"^^xsd:integer ;
+        flp:docket_number        "2100112"^^xsd:integer ;
+        flp:jurisdiction         "3"^^xsd:integer ;
+        flp:resource_uri         <https://www.courtlistener.com/api/rest/v3/fjc-integrated-database/26368529/> ;
+        flp:date_filed           "2021-04-15T00:00Z"^^xsd:dateTime ;
+        flp:nature_of_suit       "480"^^xsd:integer ;
+        flp:section              "1692"^^xsd:integer ;
+        dcterms:created          "2022-01-28T23:50:31Z"^^xsd:dateTime .
+
+:case-26368572  flp:district     <https://www.courtlistener.com/api/rest/v3/courts/gasd/> ;
+        flp:dataset_source       "9"^^xsd:integer ;
+        flp:monetary_demand      "0"^^xsd:boolean ;
+        flp:year_of_tape         "2099"^^xsd:integer ;
+        flp:resource_uri         <https://www.courtlistener.com/api/rest/v3/fjc-integrated-database/26368572/> ;
+        flp:defendant            "FIRST NATIONAL COLLECTION BURE" ;
+        flp:nature_of_suit       "480"^^xsd:integer ;
+        flp:title                "15"^^xsd:integer ;
+        dcterms:created          "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:pro_se               "0"^^xsd:boolean ;
+        flp:docket_number        "2100155"^^xsd:integer ;
+        flp:section              "1692"^^xsd:integer ;
+        flp:office               "4"^^xsd:integer ;
+        flp:plaintiff            "SPRY" ;
+        flp:county_of_residence  "13029"^^xsd:integer ;
+        dcterms:modified         "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:date_filed           "2021-05-14T00:00Z"^^xsd:dateTime ;
+        flp:origin               "1"^^xsd:integer ;
+        rdf:type                 flp:FJC_IDB_Resource ;
+        flp:jurisdiction         "3"^^xsd:integer ;
+        flp:circuit              <https://www.courtlistener.com/api/rest/v3/courts/ca11/> .
+
+:case-26368571  flp:date_terminated  "2021-05-20T00:00Z"^^xsd:dateTime ;
+        flp:defendant            "RAS LAVRAR, LLC" ;
+        flp:jurisdiction         "3"^^xsd:integer ;
+        flp:pro_se               "0"^^xsd:boolean ;
+        flp:dataset_source       "9"^^xsd:integer ;
+        flp:circuit              <https://www.courtlistener.com/api/rest/v3/courts/ca11/> ;
+        flp:plaintiff            "STAFFORD" ;
+        flp:amount_received      "0"^^<xsd:double> ;
+        flp:origin               "1"^^xsd:integer ;
+        flp:county_of_residence  "13029"^^xsd:integer ;
+        rdf:type                 flp:FJC_IDB_Resource ;
+        dcterms:modified         "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:nature_of_judgement  "0" ;
+        flp:procedural_progress  "1"^^xsd:integer ;
+        flp:title                "15"^^xsd:integer ;
+        dcterms:created          "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:monetary_demand      "0"^^xsd:boolean ;
+        flp:docket_number        "2100154"^^xsd:integer ;
+        flp:resource_uri         <https://www.courtlistener.com/api/rest/v3/fjc-integrated-database/26368571/> ;
+        flp:district             <https://www.courtlistener.com/api/rest/v3/courts/gasd/> ;
+        flp:office               "4"^^xsd:integer ;
+        flp:judgment             "0" ;
+        flp:section              "1692"^^xsd:integer ;
+        flp:disposition          "0"^^xsd:integer ;
+        flp:nature_of_suit       "480"^^xsd:integer ;
+        flp:year_of_tape         "2021"^^xsd:integer ;
+        flp:date_filed           "2021-05-14T00:00Z"^^xsd:dateTime .
+
+:case-26368563  flp:docket_number  "2100146"^^xsd:integer ;
+        flp:jurisdiction         "3"^^xsd:integer ;
+        dcterms:modified         "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:dataset_source       "9"^^xsd:integer ;
+        flp:date_filed           "2021-05-12T00:00Z"^^xsd:dateTime ;
+        flp:circuit              <https://www.courtlistener.com/api/rest/v3/courts/ca11/> ;
+        flp:county_of_residence  "13267"^^xsd:integer ;
+        flp:plaintiff            "DIXON" ;
+        flp:title                "15"^^xsd:integer ;
+        dcterms:created          "2022-01-28T23:50:31Z"^^xsd:dateTime ;
+        flp:section              "1692"^^xsd:integer ;
+        flp:district             <https://www.courtlistener.com/api/rest/v3/courts/gasd/> ;
+        flp:origin               "1"^^xsd:integer ;
+        rdf:type                 flp:FJC_IDB_Resource ;
+        flp:nature_of_suit       "480"^^xsd:integer ;
+        flp:office               "4"^^xsd:integer ;
+        flp:monetary_demand      "0"^^xsd:boolean ;
+        flp:defendant            "AMERICOLLECT, INC." ;
+        flp:resource_uri         <https://www.courtlistener.com/api/rest/v3/fjc-integrated-database/26368563/> ;
+        flp:year_of_tape         "2099"^^xsd:integer ;
+        flp:pro_se               "0"^^xsd:boolean .

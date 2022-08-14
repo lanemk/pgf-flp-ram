@@ -1,0 +1,1330 @@
+@prefix : <https://flp.example.org/people#> .
+@prefix flp: <https://flp.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://flp.example.org/people#> .
+
+<https://flp.example.org/people#> rdf:type owl:Ontology, dctype:Dataset ;
+                                   owl:imports flp: ;
+                                   dcterms:description "Dataset sample of the Free Law Project." ;    
+                                   vann:preferredNamespacePrefix  "people" ;
+                                   vann:preferredNamespaceUri     "https://flp.example.org/people#" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/dcmitype/Dataset
+dctype:Dataset rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://flp.example.org/people#
+<https://flp.example.org/people#> rdf:type owl:NamedIndividual ,
+                                           dctype:Dataset .
+
+
+###  https://flp.example.org/people#people-16188
+:people-16188 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T18:47:26Z"^^xsd:dateTime ;
+              foaf:family_name "Wolfe" ;
+              foaf:firstName "Christopher" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T18:47:26Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T18:47:26Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "History" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1995 ,
+                                         1998 ;
+              flp:educations_id 12819 ,
+                                12820 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "741159753" ;
+              flp:educations_school_id 6016 ;
+              flp:educations_school_name "Baylor University" ;
+              flp:has_photo "false" ;
+              flp:id 16188 ;
+              flp:political_affiliations_date_created "2022-08-09T18:47:26Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T18:47:26Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8523 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:slug "christopher-r-wolfe" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T18:47:26Z" ,
+                                       "2022-08-09T18:55:40Z" ,
+                                       "2022-08-09T18:55:41Z" ;
+              flp:sources_date_modified "2022-08-09T18:47:26Z"^^xsd:dateTime ,
+                                        "2022-08-09T18:55:40Z"^^xsd:dateTime ,
+                                        "2022-08-09T18:55:41Z"^^xsd:dateTime ;
+              flp:sources_id "20631" ,
+                             "20632" ,
+                             "20633" ,
+                             "20634" ,
+                             "20635" ,
+                             "20636" ,
+                             "20637" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://access.tarrantcounty.com/en/criminal-courts/felony-courts/213th-district-court.html" ,
+                              "https://ballotpedia.org/Chris_Wolfe" ,
+                              "https://gov.texas.gov/news/post/governor-abbott-appoints-wolfe-to-the-213th-judicial-district-court" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.linkedin.com/in/chris-wolfe-b98a0698/" ,
+                              "https://www.txdirectory.com/online/person/?id=28246&office=19718" ;
+              dcterms:modified "2022-08-09T18:56:58Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T18:45:49Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16188/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12819/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12820/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/6016/> ;
+              foaf:gender "male" ;
+              flp:name_middle "R." ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16188/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8523/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52511/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52512/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52513/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52514/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16188/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16188/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20631/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20632/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20633/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20634/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20635/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20636/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20637/> .
+
+
+###  https://flp.example.org/people#people-16190
+:people-16190 rdf:type owl:NamedIndividual ,
+                       schema:Person ,
+                       flp:Judge ;
+              dcterms:created "2022-08-09T19:02:22Z"^^xsd:dateTime ;
+              foaf:family_name "Womack" ;
+              foaf:firstName "Dana" ;
+              flp:date_dob "1960-08-18T00:00Z"^^xsd:dateTime ;
+              flp:date_granularity_dob "%Y-%m-%d" ;
+              flp:dob_city "Dallas" ;
+              flp:dob_country "United States" ;
+              flp:dob_state "TX" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T19:11:33Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T19:11:33Z"^^xsd:dateTime ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1982 ,
+                                         1983 ;
+              flp:educations_id 12821 ,
+                                12822 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "741159753" ;
+              flp:educations_school_id 6016 ;
+              flp:educations_school_name "Baylor University" ;
+              flp:has_photo "false" ;
+              flp:id 16190 ;
+              flp:political_affiliations_date_created "2022-08-09T19:11:33Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T19:11:33Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8524 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:religion "pr" ;
+              flp:slug "dana-michelle-womack" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T19:11:33Z" ,
+                                       "2022-08-09T19:13:46Z" ;
+              flp:sources_date_modified "2022-08-09T19:11:33Z"^^xsd:dateTime ,
+                                        "2022-08-09T19:13:46Z"^^xsd:dateTime ;
+              flp:sources_id "20638" ,
+                             "20639" ,
+                             "20640" ,
+                             "20641" ,
+                             "20642" ,
+                             "20643" ,
+                             "20644" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://gov.texas.gov/news/post/governor-abbott-appoints-womack-to-second-court-of-appeals#:~:text=Dana%20Womack%20of%20Fort%20Worth,Texas%20Board%20of%20Legal%20Specialization." ,
+                              "https://lawyers.justia.com/lawyer/judge-dana-michelle-womack-292091" ,
+                              "https://texasjudges.org/judicial-comparisons-old/20202coa2/" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&ContactID=192662" ,
+                              "https://www.txcourts.gov/2ndcoa/about-the-court/justices/justice-dana-womack/" ;
+              dcterms:modified "2022-08-09T19:15:36Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T18:58:09Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16190/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12821/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12822/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/6016/> ;
+              foaf:gender "female" ;
+              flp:name_middle "Michelle" ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16190/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8524/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52515/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52516/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52517/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52518/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52519/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52520/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52521/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52522/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16190/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16190/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20638/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20639/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20640/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20641/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20642/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20643/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20644/> .
+
+
+###  https://flp.example.org/people#people-16191
+:people-16191 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T19:19:46Z"^^xsd:dateTime ;
+              foaf:family_name "Womack" ;
+              foaf:firstName "James" ;
+              flp:dob_city "Hughes Springs" ;
+              flp:dob_country "United States" ;
+              flp:dob_state "TX" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T19:19:46Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T19:19:46Z"^^xsd:dateTime ,
+                                           "2022-08-09T19:25:44Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Political Science" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1985 ,
+                                         1988 ;
+              flp:educations_id 12823 ,
+                                12824 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "750827409" ,
+                                        "756002622" ;
+              flp:educations_school_id 3164 ,
+                                       5461 ;
+              flp:educations_school_name "Austin College" ,
+                                         "Texas Tech University" ;
+              flp:has_photo "false" ;
+              flp:id 16191 ;
+              flp:political_affiliations_date_created "2022-08-09T19:19:46Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T19:19:46Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8525 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:religion "pr" ;
+              flp:slug "james-tim-womack" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T19:19:46Z" ,
+                                       "2022-08-09T19:25:44Z" ;
+              flp:sources_date_modified "2022-08-09T19:19:46Z"^^xsd:dateTime ,
+                                        "2022-08-09T19:25:44Z"^^xsd:dateTime ;
+              flp:sources_id "20645" ,
+                             "20646" ,
+                             "20647" ,
+                             "20648" ,
+                             "20649" ,
+                             "20650" ,
+                             "20651" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "http://www.texas-lawyers-index.com/attorney/James%20T.%20(Tim)%20%27Tim%27%20Womack-192666" ,
+                              "https://lawyers.justia.com/lawyer/james-t-tim-womack-225376" ,
+                              "https://www.co.gregg.tx.us/307th-district-court" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.linkedin.com/in/tim-womack-7274b854/" ,
+                              "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&ContactID=192666" ;
+              dcterms:modified "2022-08-09T19:32:53Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T19:17:53Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16191/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12823/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12824/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/3164/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/5461/> ;
+              foaf:gender "male" ;
+              flp:name_middle "Tim" ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16191/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8525/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52523/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52524/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52525/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52526/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52527/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52528/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52529/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16191/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16191/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20645/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20646/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20647/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20648/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20649/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20650/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20651/> .
+
+
+###  https://flp.example.org/people#people-16192
+:people-16192 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T19:39:21Z"^^xsd:dateTime ;
+              foaf:family_name "Woodburn" ;
+              foaf:firstName "Douglas" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T19:39:21Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T19:39:21Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Business Administration" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1972 ,
+                                         1975 ;
+              flp:educations_id 12825 ,
+                                12826 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "756002622" ;
+              flp:educations_school_id 3164 ;
+              flp:educations_school_name "Texas Tech University" ;
+              flp:has_photo "false" ;
+              flp:id 16192 ;
+              flp:political_affiliations_date_created "2022-08-09T19:39:21Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T19:39:21Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8526 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:slug "douglas-r-woodburn" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T19:39:21Z" ,
+                                       "2022-08-09T19:45:03Z" ;
+              flp:sources_date_modified "2022-08-09T19:39:21Z"^^xsd:dateTime ,
+                                        "2022-08-09T19:45:03Z"^^xsd:dateTime ;
+              flp:sources_id "20652" ,
+                             "20653" ,
+                             "20654" ,
+                             "20655" ,
+                             "20656" ,
+                             "20657" ,
+                             "20658" ,
+                             "20659" ,
+                             "20660" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://ballotpedia.org/Doug_Woodburn" ,
+                              "https://lawyers.justia.com/lawyer/judge-douglas-r-woodburn-296775" ,
+                              "https://www.avvo.com/attorneys/79101-tx-douglas-woodburn-240052.html" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.lawyer.com/douglas-woodburn.html" ,
+                              "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&ContactID=192735" ,
+                              "https://www.txdirectory.com/online/person/?id=34110&office=19329" ;
+              dcterms:modified "2022-08-09T19:45:03Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T19:37:50Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16192/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12825/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12826/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/3164/> ;
+              foaf:gender "male" ;
+              flp:name_middle "R." ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16192/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8526/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52530/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52531/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52532/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52533/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52534/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16192/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16192/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20652/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20653/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20654/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20655/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20656/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20657/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20658/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20659/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20660/> .
+
+
+###  https://flp.example.org/people#people-16193
+:people-16193 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T19:47:07Z"^^xsd:dateTime ;
+              foaf:family_name "Woodward" ;
+              foaf:firstName "Garland" ;
+              flp:date_dob "1953-12-14T00:00Z"^^xsd:dateTime ;
+              flp:date_granularity_dob "%Y-%m-%d" ;
+              flp:dob_city "Coleman" ;
+              flp:dob_country "United States" ;
+              flp:dob_state "TX" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T19:47:07Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T19:47:07Z"^^xsd:dateTime ,
+                                           "2022-08-09T19:47:56Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Business Administration" ,
+                                           "with honors" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1976 ,
+                                         1979 ;
+              flp:educations_id 12827 ,
+                                12828 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "756002622" ;
+              flp:educations_school_id 3164 ;
+              flp:educations_school_name "Texas Tech University" ;
+              flp:has_photo "false" ;
+              flp:id 16193 ;
+              flp:political_affiliations_date_created "2022-08-09T19:47:56Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T19:47:56Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8527 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:religion "pr" ;
+              flp:slug "garland-ben-woodward" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T19:47:56Z" ,
+                                       "2022-08-09T20:02:24Z" ;
+              flp:sources_date_modified "2022-08-09T19:47:56Z"^^xsd:dateTime ,
+                                        "2022-08-09T20:02:24Z"^^xsd:dateTime ;
+              flp:sources_id "20661" ,
+                             "20662" ,
+                             "20663" ,
+                             "20664" ,
+                             "20665" ,
+                             "20666" ,
+                             "20667" ,
+                             "20668" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "http://affiliates.tyla.org/tyla/judicialdirectory/judicial_contact.cfm?new=1&judgeID=19699&CourtID=580" ,
+                              "http://www.texas-lawyers-index.com/attorney/Garland%20B.%20%27Ben%27%20Woodward-192772" ,
+                              "https://ballotpedia.org/Ben_Woodward" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.runnelscounty.org/page/runnels.District.Court" ,
+                              "https://www.tomgreencountytx.gov/page/dc.119th" ,
+                              "https://www.txdirectory.com/online/person/?id=21909&office=19418" ;
+              dcterms:modified "2022-08-09T20:04:25Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T19:46:14Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16193/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12827/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12828/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/3164/> ;
+              foaf:gender "male" ;
+              flp:name_middle "Ben" ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16193/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8527/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52535/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52536/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52537/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52538/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52539/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52540/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52541/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52542/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52543/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16193/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16193/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20661/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20662/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20663/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20664/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20665/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20666/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20667/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20668/> .
+
+
+###  https://flp.example.org/people#people-16195
+:people-16195 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T20:47:38Z"^^xsd:dateTime ;
+              foaf:family_name "Wortham" ;
+              foaf:firstName "Baylor" ;
+              flp:dob_city "Beaumont" ;
+              flp:dob_country "United States" ;
+              flp:dob_state "TX" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T20:47:38Z"^^xsd:dateTime ,
+                                          "2022-08-09T20:57:26Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T20:57:26Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Business Administration - Management Information Systems" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 2003 ,
+                                         2005 ;
+              flp:educations_id 12829 ,
+                                12830 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "741159753" ;
+              flp:educations_school_id 6016 ;
+              flp:educations_school_name "Baylor University" ;
+              flp:has_photo "false" ;
+              flp:id 16195 ;
+              flp:political_affiliations_date_created "2022-08-09T20:47:38Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T20:47:38Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8528 ;
+              flp:political_affiliations_political_party "d" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:religion "ca" ;
+              flp:slug "baylor-g-wortham" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T20:47:38Z" ,
+                                       "2022-08-09T20:56:04Z" ;
+              flp:sources_date_modified "2022-08-09T20:47:38Z"^^xsd:dateTime ,
+                                        "2022-08-09T20:56:04Z"^^xsd:dateTime ;
+              flp:sources_id "20669" ,
+                             "20670" ,
+                             "20671" ,
+                             "20672" ,
+                             "20673" ,
+                             "20675" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "http://baylorwortham.com/about-baylor-wortham/" ,
+                              "http://www.legaldirectories.com/Wortham-Baylor-G-42764-Atty.aspx" ,
+                              "https://ballotpedia.org/Baylor_Wortham" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.linkedin.com/in/baylor-wortham-7818046b/" ;
+              dcterms:modified "2022-08-09T20:58:41Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T20:05:33Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16195/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12829/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12830/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/6016/> ;
+              foaf:gender "male" ;
+              flp:name_middle "G." ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16195/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8528/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52544/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52545/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52546/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52547/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52548/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16195/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16195/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20669/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20670/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20671/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20672/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20673/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20675/> .
+
+
+###  https://flp.example.org/people#people-16197
+:people-16197 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T21:23:41Z"^^xsd:dateTime ;
+              foaf:family_name "Wynne" ;
+              foaf:firstName "Lindsey" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T21:23:41Z"^^xsd:dateTime ,
+                                          "2022-08-09T21:34:39Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T21:23:41Z"^^xsd:dateTime ,
+                                           "2022-08-09T21:34:39Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Business Administration" ,
+                                           "International Legal Studies" ;
+              flp:educations_degree_level "ba" ,
+                                          "cert" ,
+                                          "jd" ;
+              flp:educations_degree_year 2008 ;
+              flp:educations_id 12834 ,
+                                12835 ,
+                                12836 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ,
+                                                 "2022-08-09T21:34:17Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ,
+                                                  "2022-08-09T21:34:17Z"^^xsd:dateTime ;
+              flp:educations_school_ein "746000203" ;
+              flp:educations_school_id 321 ,
+                                       6539 ;
+              flp:educations_school_name "The University of Texas at Austin" ,
+                                         "University College of London" ;
+              flp:has_photo "false" ;
+              flp:id 16197 ;
+              flp:political_affiliations_date_created "2022-08-09T21:23:41Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T21:23:41Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8530 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:slug "lindsey-marie-byers-wynne" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T21:23:41Z" ,
+                                       "2022-08-09T21:31:42Z" ;
+              flp:sources_date_modified "2022-08-09T21:23:41Z"^^xsd:dateTime ,
+                                        "2022-08-09T21:31:42Z"^^xsd:dateTime ;
+              flp:sources_id "20685" ,
+                             "20686" ,
+                             "20687" ,
+                             "20688" ,
+                             "20689" ,
+                             "20690" ,
+                             "20691" ,
+                             "20692" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://ballotpedia.org/Lindsey_Wynne" ,
+                              "https://judgelindseywynne.com/" ,
+                              "https://www.avvo.com/attorneys/lindsey-wynne-1805077.html" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.law.com/texaslawyer/2020/10/07/christy-albano-and-lindsey-wynne-are-on-the-ballot-for-judge-of-mckinneys-468th-district-court/" ,
+                              "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&ContactID=300569" ,
+                              "https://www.txdirectory.com/online/person/?id=64773&office=27862" ;
+              dcterms:modified "2022-08-09T21:34:39Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T21:22:05Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16197/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12834/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12835/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12836/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/321/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/6539/> ;
+              foaf:gender "female" ;
+              flp:name_middle "Marie Byers" ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16197/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8530/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52556/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52557/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52558/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52559/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52560/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16197/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16197/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20685/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20686/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20687/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20688/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20689/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20690/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20691/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20692/> .
+
+
+###  https://flp.example.org/people#people-16198
+:people-16198 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T21:37:11Z"^^xsd:dateTime ;
+              foaf:family_name "Wysocki" ;
+              foaf:firstName "Ashley" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T21:37:11Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T21:37:11Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "with honors" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ,
+                                          "mba" ;
+              flp:educations_degree_year 2004 ,
+                                         2007 ;
+              flp:educations_id 12837 ,
+                                12838 ,
+                                12839 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "746000203" ,
+                                        "756002622" ;
+              flp:educations_school_id 3164 ,
+                                       321 ;
+              flp:educations_school_name "Texas Tech University" ,
+                                         "The University of Texas at Austin" ;
+              flp:has_photo "false" ;
+              flp:id 16198 ;
+              flp:political_affiliations_date_created "2022-08-09T21:37:11Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T21:37:11Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8531 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:religion "pr" ;
+              flp:slug "ashley-elizabeth-bradford-wysocki" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T21:37:11Z" ,
+                                       "2022-08-09T21:48:45Z" ;
+              flp:sources_date_modified "2022-08-09T21:37:11Z"^^xsd:dateTime ,
+                                        "2022-08-09T21:48:45Z"^^xsd:dateTime ;
+              flp:sources_id "20693" ,
+                             "20694" ,
+                             "20695" ,
+                             "20696" ,
+                             "20697" ,
+                             "20698" ,
+                             "20699" ,
+                             "20700" ,
+                             "20701" ,
+                             "20702" ,
+                             "20703" ,
+                             "20704" ,
+                             "20705" ,
+                             "20706" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://attorneyatlawmagazine.com/judge-ashley-bradford-wysocki" ,
+                              "https://ballotpedia.org/Ashley_Wysocki" ,
+                              "https://dallasgop.org/candidate-information-37/ashley-wysocki?send_to=%2Fcandidate-directory-by-contest" ,
+                              "https://gov.texas.gov/news/post/governor-abbott-appoints-wysocki-to-44th-judicial-district-court" ,
+                              "https://keepjudgewysocki.com/" ,
+                              "https://texasborderbusiness.com/governor-abbott-appoints-wysocki-to-44th-judicial-district-court/" ,
+                              "https://www.avvo.com/attorneys/75229-tx-ashley-wysocki-1772986.html" ,
+                              "https://www.dallascounty.org/government/courts/civil_district/44th/bio.php" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.law.com/texaslawyer/2020/09/21/texas-election-judge-ashley-wysocki-draws-challenger-kim-brown-in-race-for-254th-district-court/" ,
+                              "https://www.linkedin.com/in/ashley-wysocki-7293037a/" ,
+                              "https://www.oneilattorneys.com/firm-news/2019/january/attorney-ashley-wysocki-appointed-to-254th-judic/" ,
+                              "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&ContactID=299846" ;
+              dcterms:modified "2022-08-09T21:54:31Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T21:35:22Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16198/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12837/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12838/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12839/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/3164/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/321/> ;
+              foaf:gender "female" ;
+              flp:name_middle "Elizabeth Bradford" ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16198/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8531/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52561/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52562/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52563/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52564/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52565/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52566/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16198/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16198/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20693/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20694/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20695/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20696/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20697/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20698/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20699/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20700/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20701/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20702/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20703/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20704/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20705/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20706/> .
+
+
+###  https://flp.example.org/people#people-16199
+:people-16199 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T21:57:39Z"^^xsd:dateTime ;
+              foaf:family_name "Yeats" ;
+              foaf:firstName "Timothy" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T21:57:39Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T21:57:39Z"^^xsd:dateTime ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1979 ,
+                                         1982 ;
+              flp:educations_id 12840 ,
+                                12841 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "756002622" ;
+              flp:educations_school_id 3164 ;
+              flp:educations_school_name "Texas Tech University" ;
+              flp:has_photo "false" ;
+              flp:id 16199 ;
+              flp:political_affiliations_date_created "2022-08-09T21:57:39Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T21:57:39Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8532 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:slug "timothy-d-yeats" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T21:57:39Z" ,
+                                       "2022-08-09T22:03:52Z" ;
+              flp:sources_date_modified "2022-08-09T21:57:39Z"^^xsd:dateTime ,
+                                        "2022-08-09T22:03:52Z"^^xsd:dateTime ;
+              flp:sources_id "20707" ,
+                             "20708" ,
+                             "20709" ,
+                             "20710" ,
+                             "20711" ,
+                             "20712" ,
+                             "20713" ,
+                             "20714" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://ballotpedia.org/Timothy_Yeats#:~:text=Timothy%20Yeats%20is%20the%20judge,expired%20on%20December%2031%2C%202018." ,
+                              "https://opengovus.com/texas-lawyer/22151200" ,
+                              "https://www.co.howard.tx.us/page/howard.District.Court" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.martincountytx.com/directory.aspx?EID=19" ,
+                              "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&ContactID=193052" ,
+                              "https://www.txdirectory.com/online/person/?id=39612&office=19410" ;
+              dcterms:modified "2022-08-09T22:25:57Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T21:55:01Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16199/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12840/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12841/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/3164/> ;
+              foaf:gender "male" ;
+              flp:name_middle "D." ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16199/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8532/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52567/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52568/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52569/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52570/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52571/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16199/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16199/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20707/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20708/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20709/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20710/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20711/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20712/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20713/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20714/> .
+
+
+###  https://flp.example.org/people#people-16200
+:people-16200 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T22:08:17Z"^^xsd:dateTime ;
+              foaf:family_name "Yoo Clinton" ;
+              foaf:firstName "Tina" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T22:08:17Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T22:08:17Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Philosophy, with honors" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1992 ,
+                                         1995 ;
+              flp:educations_id 12842 ,
+                                12843 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "746000203" ,
+                                        "750800689" ;
+              flp:educations_school_id 1481 ,
+                                       321 ;
+              flp:educations_school_name "Southern Methodist University" ,
+                                         "The University of Texas at Austin" ;
+              flp:has_photo "false" ;
+              flp:id 16200 ;
+              flp:political_affiliations_date_created "2022-08-09T22:08:17Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T22:08:17Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8533 ;
+              flp:political_affiliations_political_party "d" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "a" ;
+              flp:religion "pr" ;
+              flp:slug "tina-yoo-clinton" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T22:08:17Z" ,
+                                       "2022-08-09T22:15:21Z" ;
+              flp:sources_date_modified "2022-08-09T22:08:17Z"^^xsd:dateTime ,
+                                        "2022-08-09T22:15:21Z"^^xsd:dateTime ;
+              flp:sources_id "20715" ,
+                             "20716" ,
+                             "20717" ,
+                             "20718" ,
+                             "20719" ,
+                             "20720" ,
+                             "20721" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://ballotpedia.org/Tina_Yoo_Clinton" ,
+                              "https://kagc.us/team/judge-tina-yoo-clinton/" ,
+                              "https://www.ballotready.org/tx/texas-judge-of-criminal-district-court-dallas-county-seat-1/tina-yoo-clinton" ,
+                              "https://www.dallascounty.org/government/courts/criminal_district/court1/" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.nbcdfw.com/local/dfw-morningnews-we-recommend-tina-yoo-clinton-in-the-democratic-primary-for-criminal-district-court-no-1/228119/" ;
+              dcterms:modified "2022-08-09T22:16:09Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T22:07:11Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16200/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12842/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12843/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/1481/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/321/> ;
+              foaf:gender "female" ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16200/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8533/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52572/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52573/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52574/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52575/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52576/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16200/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16200/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20715/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20716/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20717/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20718/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20719/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20720/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20721/> .
+
+
+###  https://flp.example.org/people#people-16201
+:people-16201 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T22:28:28Z"^^xsd:dateTime ;
+              foaf:family_name "Youngblood" ;
+              foaf:firstName "John" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T22:28:28Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T22:28:28Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Economics" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1988 ,
+                                         1991 ;
+              flp:educations_id 12844 ,
+                                12845 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "741159753" ,
+                                        "746000531" ;
+              flp:educations_school_id 1296 ,
+                                       6016 ;
+              flp:educations_school_name "Baylor University" ,
+                                         "Texas A & M University-College Station" ;
+              flp:has_photo "false" ;
+              flp:id 16201 ;
+              flp:political_affiliations_date_created "2022-08-09T22:28:28Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T22:28:28Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8534 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:slug "john-w-youngblood" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T22:28:28Z" ,
+                                       "2022-08-09T22:36:15Z" ,
+                                       "2022-08-09T22:36:38Z" ;
+              flp:sources_date_modified "2022-08-09T22:28:28Z"^^xsd:dateTime ,
+                                        "2022-08-09T22:36:15Z"^^xsd:dateTime ,
+                                        "2022-08-09T22:36:38Z"^^xsd:dateTime ;
+              flp:sources_id "20722" ,
+                             "20723" ,
+                             "20724" ,
+                             "20725" ,
+                             "20726" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://ballotpedia.org/John_Youngblood" ,
+                              "https://card.txcourts.gov/ajrdata.aspx?ct=55&st=&ajr=3" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.milamcounty.net/page/milam.distjudge" ;
+              dcterms:modified "2022-08-09T22:36:38Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T22:26:07Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16201/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12844/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12845/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/1296/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/6016/> ;
+              foaf:gender "male" ;
+              flp:name_middle "W." ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16201/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8534/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52577/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52578/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52579/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52580/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52581/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52582/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16201/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16201/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20722/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20723/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20724/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20725/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20726/> .
+
+
+###  https://flp.example.org/people#people-16202
+:people-16202 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T22:39:02Z"^^xsd:dateTime ;
+              foaf:family_name "Zimmerer" ;
+              foaf:firstName "Gerald" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T22:39:02Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T22:39:02Z"^^xsd:dateTime ,
+                                           "2022-08-09T22:48:10Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Health Law, International Law" ,
+                                           "Theology, Business Management" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ,
+                                          "llm" ;
+              flp:educations_degree_year 1978 ,
+                                         1984 ,
+                                         2015 ;
+              flp:educations_id 12846 ,
+                                12847 ,
+                                12848 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "741400699" ,
+                                        "742683499" ,
+                                        "746001399" ;
+              flp:educations_school_id 2470 ,
+                                       2480 ,
+                                       3322 ;
+              flp:educations_school_name "Houston Baptist University" ,
+                                         "South Texas College" ,
+                                         "University of Houston" ;
+              flp:has_photo "false" ;
+              flp:id 16202 ;
+              flp:political_affiliations_date_created "2022-08-09T22:39:02Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T22:39:02Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8535 ;
+              flp:political_affiliations_political_party "d" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:slug "gerald-lee-zimmerer" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T22:39:02Z" ,
+                                       "2022-08-09T22:48:10Z" ;
+              flp:sources_date_modified "2022-08-09T22:39:02Z"^^xsd:dateTime ,
+                                        "2022-08-09T22:48:10Z"^^xsd:dateTime ;
+              flp:sources_id "20727" ,
+                             "20728" ,
+                             "20729" ,
+                             "20730" ,
+                             "20731" ,
+                             "20732" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://ballotpedia.org/Jerry_Zimmerer" ,
+                              "https://www.ballotready.org/tx/texas-justice-of-appeals-court-district-14-place-3/jerry-zimmerer/" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.linkedin.com/in/geraldzimmerer/" ,
+                              "https://www.txcourts.gov/14thcoa/about-the-court/justices/justice-jerry-zimmerer/" ;
+              dcterms:modified "2022-08-09T22:55:15Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T22:37:37Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16202/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12846/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12847/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12848/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/2470/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/2480/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/3322/> ;
+              foaf:gender "male" ;
+              flp:name_middle "Lee" ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16202/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8535/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52583/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52584/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52585/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52586/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52587/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52588/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52589/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52590/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52591/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16202/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16202/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20727/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20728/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20729/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20730/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20731/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20732/> .
+
+
+###  https://flp.example.org/people#people-16204
+:people-16204 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T23:05:51Z"^^xsd:dateTime ;
+              foaf:family_name "Zirpoli" ;
+              foaf:firstName "Danah" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T23:05:51Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T23:05:51Z"^^xsd:dateTime ;
+              flp:educations_degree_detail "Criminal Justice" ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 2003 ,
+                                         2006 ;
+              flp:educations_id 12849 ,
+                                12850 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "751396988" ,
+                                        "756002622" ;
+              flp:educations_school_id 3164 ,
+                                       5920 ;
+              flp:educations_school_name "Texas Tech University" ,
+                                         "The University of Texas at Tyler" ;
+              flp:has_photo "false" ;
+              flp:id 16204 ;
+              flp:political_affiliations_date_created "2022-08-09T23:05:51Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T23:05:51Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8536 ;
+              flp:political_affiliations_political_party "r" ;
+              flp:political_affiliations_source "o" ;
+              flp:race "w" ;
+              flp:religion "pr" ;
+              flp:slug "danah-l-zirpoli" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T23:05:51Z" ,
+                                       "2022-08-09T23:10:46Z" ;
+              flp:sources_date_modified "2022-08-09T23:05:51Z"^^xsd:dateTime ,
+                                        "2022-08-09T23:10:46Z"^^xsd:dateTime ;
+              flp:sources_id "20733" ,
+                             "20734" ,
+                             "20735" ,
+                             "20736" ,
+                             "20737" ,
+                             "20738" ,
+                             "20739" ;
+              flp:sources_notes "American Bench, 2021 ed." ,
+                                "catmom" ;
+              flp:sources_url "https://card.txcourts.gov/ajrdata.aspx?ct=55&st=&ajr=9" ,
+                              "https://opengovus.com/texas-lawyer/24058195" ,
+                              "https://www.forster-long.com/americanbench" ,
+                              "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&ContactID=295533" ,
+                              "https://www.txdirectory.com/online/person/?id=62217&office=19437" ,
+                              "https://www.txdirectory.com/online/person/?id=62217&office=19442" ;
+              dcterms:modified "2022-08-09T23:10:46Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T22:56:50Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16204/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12849/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12850/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/3164/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/5920/> ;
+              foaf:gender "female" ;
+              flp:name_middle "L." ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16204/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8536/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52592/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52593/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52594/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52595/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16204/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16204/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20733/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20734/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20735/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20736/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20737/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20738/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20739/> .
+
+
+###  https://flp.example.org/people#people-16205
+:people-16205 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T23:13:44Z"^^xsd:dateTime ;
+              foaf:family_name "Hockett" ;
+              foaf:firstName "Lori" ;
+              flp:dob_country "United States" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T23:13:44Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T23:13:44Z"^^xsd:dateTime ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_id 12851 ,
+                                12852 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "741159753" ,
+                                        "750800689" ;
+              flp:educations_school_id 1481 ,
+                                       6016 ;
+              flp:educations_school_name "Baylor University" ,
+                                         "Southern Methodist University" ;
+              flp:has_photo "false" ;
+              flp:id 16205 ;
+              flp:race "w" ;
+              flp:slug "lori-chrisman-hockett" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T23:13:44Z" ;
+              flp:sources_date_modified "2022-08-09T23:13:44Z"^^xsd:dateTime ;
+              flp:sources_id "20740" ,
+                             "20741" ,
+                             "20742" ,
+                             "20743" ,
+                             "20744" ;
+              flp:sources_notes "catmom" ;
+              flp:sources_url "https://ballotpedia.org/Lori_Chrisman_Hockett" ,
+                              "https://www.hockettmediation.com/about-hockett-mediation/" ,
+                              "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&ContactID=172140" ,
+                              "https://www.uplawtx.com/Attorneys/Index?AttorneyName=Hockett&AttorneyFullName=Lori%20C.%20Hockett,%20Of%20Counsel" ;
+              dcterms:modified "2022-08-09T23:19:44Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T23:12:24Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16205/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12851/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12852/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/1481/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/6016/> ;
+              foaf:gender "female" ;
+              flp:name_middle "Chrisman" ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52596/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52597/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52598/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52599/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52600/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16205/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16205/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20740/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20741/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20742/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20743/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20744/> .
+
+
+###  https://flp.example.org/people#people-16206
+:people-16206 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T23:26:50Z"^^xsd:dateTime ;
+              foaf:family_name "Fisher" ;
+              foaf:firstName "Joseph" ;
+              flp:date_dob "1910-04-16T00:00Z"^^xsd:dateTime ;
+              flp:date_dod "2000-06-19T00:00Z" ;
+              flp:date_granularity_dob "%Y-%m-%d" ;
+              flp:date_granularity_dod "%Y-%m-%d" ;
+              flp:dob_city "Bland Lake" ;
+              flp:dob_country "United States" ;
+              flp:dob_state "TX" ;
+              flp:dod_city "Beaumont" ;
+              flp:dod_country "United States" ;
+              flp:dod_state "TX" ;
+              flp:educations_date_created "2022-08-09T23:26:50Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T23:26:50Z"^^xsd:dateTime ;
+              flp:educations_degree_level "llb" ;
+              flp:educations_id 12853 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "746000203" ;
+              flp:educations_school_id 321 ;
+              flp:educations_school_name "The University of Texas at Austin" ;
+              flp:has_photo "false" ;
+              flp:id 16206 ;
+              flp:race "w" ;
+              flp:slug "joseph-jefferson-fisher" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T23:26:50Z" ;
+              flp:sources_date_modified "2022-08-09T23:26:50Z"^^xsd:dateTime ;
+              flp:sources_id "20745" ;
+              flp:sources_notes "catmom" ;
+              flp:sources_url "https://en.wikipedia.org/wiki/Joseph_Jefferson_Fisher" ;
+              dcterms:modified "2022-08-09T23:26:50Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T23:23:25Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16206/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12853/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/321/> ;
+              foaf:gender "male" ;
+              flp:name_middle "Jefferson" ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52601/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52602/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52603/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16206/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16206/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20745/> .
+
+
+###  https://flp.example.org/people#people-16207
+:people-16207 rdf:type owl:NamedIndividual ,
+                       schema:Person ;
+              dcterms:created "2022-08-09T23:34:19Z"^^xsd:dateTime ;
+              foaf:family_name "Teel" ;
+              foaf:firstName "James" ;
+              flp:dob_city "Fort Worth" ;
+              flp:dob_country "United States" ;
+              flp:dob_state "TX" ;
+              flp:dod_country "United States" ;
+              flp:educations_date_created "2022-08-09T23:34:19Z"^^xsd:dateTime ;
+              flp:educations_date_modified "2022-08-09T23:34:19Z"^^xsd:dateTime ;
+              flp:educations_degree_level "ba" ,
+                                          "jd" ;
+              flp:educations_degree_year 1982 ,
+                                         1985 ;
+              flp:educations_id 12854 ,
+                                12855 ;
+              flp:educations_school_date_created "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_date_modified "2010-06-08T00:00Z"^^xsd:dateTime ;
+              flp:educations_school_ein "750800691" ,
+                                        "756002622" ;
+              flp:educations_school_id 2085 ,
+                                       3164 ;
+              flp:educations_school_name "Texas Tech University" ,
+                                         "Texas Wesleyan University" ;
+              flp:has_photo "false" ;
+              flp:id 16207 ;
+              flp:political_affiliations_date_created "2022-08-09T23:34:19Z"^^xsd:dateTime ;
+              flp:political_affiliations_date_modified "2022-08-09T23:34:19Z"^^xsd:dateTime ;
+              flp:political_affiliations_id 8537 ;
+              flp:political_affiliations_political_party "d" ;
+              flp:political_affiliations_source "o" ;
+              flp:slug "james-charles-teel" ;
+              flp:sources_date_accessed "2022-08-09T00:00Z"^^xsd:dateTime ;
+              flp:sources_date_created "2022-08-09T23:34:19Z" ;
+              flp:sources_date_modified "2022-08-09T23:34:19Z"^^xsd:dateTime ;
+              flp:sources_id "20746" ,
+                             "20747" ,
+                             "20748" ,
+                             "20749" ,
+                             "20750" ;
+              flp:sources_notes "catmom" ;
+              flp:sources_url "https://ballotpedia.org/James_Teel" ,
+                              "https://govsalaries.com/teel-james-c-52064063" ,
+                              "https://lawyers.justia.com/lawyer/james-charles-teel-236021" ,
+                              "https://www.avvo.com/attorneys/76111-tx-james-teel-226129.html" ;
+              dcterms:modified "2022-08-09T23:37:33Z"^^xsd:dateTime ;
+              flp:date_completed "2022-08-09T23:31:19Z"^^xsd:dateTime ;
+              flp:educations_person <https://www.courtlistener.com/api/rest/v3/people/16207/> ;
+              flp:educations_resource_uri <https://www.courtlistener.com/api/rest/v3/educations/12854/> ,
+                                          <https://www.courtlistener.com/api/rest/v3/educations/12855/> ;
+              flp:educations_school_resource_uri <https://www.courtlistener.com/api/rest/v3/schools/2085/> ,
+                                                 <https://www.courtlistener.com/api/rest/v3/schools/3164/> ;
+              foaf:gender "male" ;
+              flp:name_middle "Charles" ;
+              flp:political_affiliations_person <https://www.courtlistener.com/api/rest/v3/people/16207/> ;
+              flp:political_affiliations_resource_uri <https://www.courtlistener.com/api/rest/v3/political-affiliations/8537/> ;
+              flp:positions <https://www.courtlistener.com/api/rest/v3/positions/52604/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52605/> ,
+                            <https://www.courtlistener.com/api/rest/v3/positions/52606/> ;
+              flp:resource_uri <https://www.courtlistener.com/api/rest/v3/people/16207/> ;
+              flp:sources_person <https://www.courtlistener.com/api/rest/v3/people/16207/> ;
+              flp:sources_resource_uri <https://www.courtlistener.com/api/rest/v3/sources/20746/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20747/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20748/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20749/> ,
+                                       <https://www.courtlistener.com/api/rest/v3/sources/20750/> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

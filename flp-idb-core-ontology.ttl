@@ -1,0 +1,668 @@
+@prefix : <https://flp.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://flp.example.org/> .
+
+<https://flp.example.org/> rdf:type owl:Ontology ;
+                            dcterms:description "Ontology of databases of the Free Law Project." ;
+                            vann:preferredNamespaceUri "https://flp.example.org/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/dateSubmitted
+dcterms:dateSubmitted rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/gender
+schema:gender rdf:type owl:DatatypeProperty .
+
+
+###  http://schema.org/name
+schema:name rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/family_name
+foaf:family_name rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "Use for flp:family_name." .
+
+
+###  http://xmlns.com/foaf/0.1/firstName
+foaf:firstName rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Use for flp:first_name." .
+
+
+###  http://xmlns.com/foaf/0.1/gender
+foaf:gender
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "The gender of this Agent (typically but not necessarily 'male' or 'female')." ;
+  rdfs:domain foaf:Agent ;
+  rdfs:isDefinedBy foaf: ;
+  rdfs:label "gender" ;
+  rdfs:range [
+      rdf:type owl:DataRange ;
+      owl:oneOf (
+          "male"^^xsd:string
+          "female"^^xsd:string
+        ) ;
+    ] ;
+  vs:term_status "testing" 
+.
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/amount_received
+:amount_received rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/arbitration_at_filing
+:arbitration_at_filing rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/arbitration_at_termination
+:arbitration_at_termination rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/circuit
+:circuit rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/citation_string
+:citation_string rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string .
+
+
+###  https://flp.example.org/class_action
+:class_action rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/county_of_residence
+:county_of_residence rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/dataset_source
+:dataset_source rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/date_dob
+:date_dob rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_dod
+:date_dod rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_filed
+:date_filed rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_granularity_dob
+:date_granularity_dob rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_granularity_dod
+:date_granularity_dod rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_last_pacer_contact
+:date_last_pacer_contact rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_terminated
+:date_terminated rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_transfer
+:date_transfer rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/defendant
+:defendant rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string .
+
+
+###  https://flp.example.org/disposition
+:disposition rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/district
+:district rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/diversity_of_residence
+:diversity_of_residence rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/dob_city
+:dob_city rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/dob_country
+:dob_country rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/dob_state
+:dob_state rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/docket_number
+:docket_number rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/dod_city
+:dod_city rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/dod_country
+:dod_country rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/dod_state
+:dod_state rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_date_created
+:educations_date_created rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_date_modified
+:educations_date_modified rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_degree_detail
+:educations_degree_detail rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:string .
+
+
+###  https://flp.example.org/educations_degree_level
+:educations_degree_level rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:string .
+
+
+###  https://flp.example.org/educations_degree_year
+:educations_degree_year rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/educations_id
+:educations_id rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/educations_resource_uri
+:educations_resource_uri rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/educations_school_date_created
+:educations_school_date_created rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_school_date_modified
+:educations_school_date_modified rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_school_ein
+:educations_school_ein rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/educations_school_id
+:educations_school_id rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/educations_school_is_alias_of
+:educations_school_is_alias_of rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/educations_school_name
+:educations_school_name rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string .
+
+
+###  https://flp.example.org/educations_school_resource_uri
+:educations_school_resource_uri rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/end_date
+:end_date rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/first_name
+:first_name rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/fjc_court_id
+:fjc_court_id rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/fjc_id
+:fjc_id rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/ftm_eid
+:ftm_eid rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://flp.example.org/ftm_total_received
+:ftm_total_received rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/has_opinion_scraper
+:has_opinion_scraper rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/has_oral_argument_scraper
+:has_oral_argument_scraper rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/has_photo
+:has_photo rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/id
+:id rdf:type owl:DatatypeProperty ,
+             owl:FunctionalProperty ;
+    rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/in_use
+:in_use rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/is_alias_of
+:is_alias_of rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/judgment
+:judgment rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/jurisdiction
+:jurisdiction rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/last_name
+:last_name rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/middle_name
+:middle_name rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf foaf:name .
+
+
+###  https://flp.example.org/monetary_demand
+:monetary_demand rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/multidistrict_litigation_docket_number
+:multidistrict_litigation_docket_number rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/nature_of_judgement
+:nature_of_judgement rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/nature_of_offense
+:nature_of_offense rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/nature_of_suit
+:nature_of_suit rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/office
+:office rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/origin
+:origin rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/pacer_court_id
+:pacer_court_id rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/pacer_has_rss_feed
+:pacer_has_rss_feed rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/pacer_rss_entry_types
+:pacer_rss_entry_types rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/plaintiff
+:plaintiff rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string .
+
+
+###  https://flp.example.org/political_affiliations_date_created
+:political_affiliations_date_created rdf:type owl:DatatypeProperty ;
+                                     rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_end
+:political_affiliations_date_end rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_granularity_end
+:political_affiliations_date_granularity_end rdf:type owl:DatatypeProperty ;
+                                             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_granularity_start
+:political_affiliations_date_granularity_start rdf:type owl:DatatypeProperty ;
+                                               rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_modified
+:political_affiliations_date_modified rdf:type owl:DatatypeProperty ;
+                                      rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_start
+:political_affiliations_date_start rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_id
+:political_affiliations_id rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/political_affiliations_person
+:political_affiliations_person rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/political_affiliations_political_party
+:political_affiliations_political_party rdf:type owl:DatatypeProperty ;
+                                        rdfs:range xsd:string .
+
+
+###  https://flp.example.org/political_affiliations_resource_uri
+:political_affiliations_resource_uri rdf:type owl:DatatypeProperty ;
+                                     rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/political_affiliations_source
+:political_affiliations_source rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:string .
+
+
+###  https://flp.example.org/position
+:position rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string .
+
+
+###  https://flp.example.org/positions
+:positions rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/pro_se
+:pro_se rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/procedural_progress
+:procedural_progress rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/race
+:race rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+
+###  https://flp.example.org/religion
+:religion rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/resource_uri
+:resource_uri rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/section
+:section rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/short_name
+:short_name rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string .
+
+
+###  https://flp.example.org/slug
+:slug rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/sources_date_accessed
+:sources_date_accessed rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/sources_date_created
+:sources_date_created rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/sources_date_modified
+:sources_date_modified rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/sources_id
+:sources_id rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/sources_notes
+:sources_notes rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string .
+
+
+###  https://flp.example.org/sources_person
+:sources_person rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/sources_resource_uri
+:sources_resource_uri rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/sources_url
+:sources_url rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/start_date
+:start_date rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/subsection
+:subsection rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/suffix
+:suffix rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/termination_class_action_status
+:termination_class_action_status rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/transfer_docket_number
+:transfer_docket_number rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/transfer_office
+:transfer_office rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/transfer_origin
+:transfer_origin rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/url
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/version
+:version rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/year_of_tape
+:year_of_tape rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Organization
+schema:Organization rdf:type owl:Class .
+
+
+###  http://schema.org/Person
+schema:Person rdf:type owl:Class .
+
+
+###  https://flp.example.org/Attorney
+:Attorney rdf:type owl:Class ;
+          rdfs:subClassOf schema:Person .
+
+
+###  https://flp.example.org/Bankruptcy_Court
+:Bankruptcy_Court rdf:type owl:Class ;
+                  rdfs:subClassOf :Courts .
+
+
+###  https://flp.example.org/Circuit_Court
+:Circuit_Court rdf:type owl:Class ;
+               rdfs:subClassOf :Courts .
+
+
+###  https://flp.example.org/Courts
+:Courts rdf:type owl:Class ;
+        rdfs:subClassOf schema:Organization .
+
+
+###  https://flp.example.org/Defendant
+:Defendant rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Class ;
+                             owl:unionOf ( schema:Organization
+                                           schema:Person
+                                         )
+                           ] .
+
+
+###  https://flp.example.org/FJC_IDB_Resource
+:FJC_IDB_Resource rdf:type owl:Class ;
+                  rdfs:comment "FJC Integrated Database Instance Data"@en .
+
+
+###  https://flp.example.org/Judge
+:Judge rdf:type owl:Class ;
+       rdfs:subClassOf schema:Person .
+
+
+###  https://flp.example.org/Law_Firm
+:Law_Firm rdf:type owl:Class ;
+          rdfs:subClassOf schema:Organization .
+
+
+###  https://flp.example.org/Plaintiff
+:Plaintiff rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Class ;
+                             owl:unionOf ( schema:Organization
+                                           schema:Person
+                                         )
+                           ] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

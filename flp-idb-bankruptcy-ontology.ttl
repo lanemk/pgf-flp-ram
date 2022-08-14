@@ -1,0 +1,1332 @@
+@prefix : <https://flp.example.org/bankruptcy#> .
+@prefix flp: <https://flp.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://flp.example.org/bankruptcy#> .
+
+<https://flp.example.org/bankruptcy#> rdf:type owl:Ontology ;
+                                       owl:imports flp: ;
+                                       dcterms:description "Bankruptcy IDB ontology for the Free Law Project database." ;
+                                       vann:preferredNamespaceUri "https://flp.example.org/bankruptcy#" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/dateSubmitted
+dcterms:dateSubmitted rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/gender
+schema:gender rdf:type owl:DatatypeProperty .
+
+
+###  http://schema.org/name
+schema:name rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/family_name
+foaf:family_name rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "Use for flp:family_name." .
+
+
+###  http://xmlns.com/foaf/0.1/firstName
+foaf:firstName rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Use for flp:first_name." .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/amount_received
+flp:amount_received rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/arbitration_at_filing
+flp:arbitration_at_filing rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/arbitration_at_termination
+flp:arbitration_at_termination rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/circuit
+flp:circuit rdf:type owl:DatatypeProperty ;
+            owl:equivalentProperty :circuit ;
+            rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/citation_string
+flp:citation_string rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string .
+
+
+###  https://flp.example.org/class_action
+flp:class_action rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/county_of_residence
+flp:county_of_residence rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/dataset_source
+flp:dataset_source rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/date_dob
+flp:date_dob rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_dod
+flp:date_dod rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_filed
+flp:date_filed rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_granularity_dob
+flp:date_granularity_dob rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_granularity_dod
+flp:date_granularity_dod rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_last_pacer_contact
+flp:date_last_pacer_contact rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_terminated
+flp:date_terminated rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/date_transfer
+flp:date_transfer rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/defendant
+flp:defendant rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string .
+
+
+###  https://flp.example.org/disposition
+flp:disposition rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/district
+flp:district rdf:type owl:DatatypeProperty ;
+             owl:equivalentProperty :district ;
+             rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/diversity_of_residence
+flp:diversity_of_residence rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/dob_city
+flp:dob_city rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/dob_country
+flp:dob_country rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/dob_state
+flp:dob_state rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/docket_number
+flp:docket_number rdf:type owl:DatatypeProperty ;
+                  owl:equivalentProperty :docket_number ;
+                  rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/dod_city
+flp:dod_city rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/dod_country
+flp:dod_country rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/dod_state
+flp:dod_state rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_date_created
+flp:educations_date_created rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_date_modified
+flp:educations_date_modified rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_degree_detail
+flp:educations_degree_detail rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:string .
+
+
+###  https://flp.example.org/educations_degree_level
+flp:educations_degree_level rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:string .
+
+
+###  https://flp.example.org/educations_degree_year
+flp:educations_degree_year rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/educations_id
+flp:educations_id rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/educations_resource_uri
+flp:educations_resource_uri rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/educations_school_date_created
+flp:educations_school_date_created rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_school_date_modified
+flp:educations_school_date_modified rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/educations_school_ein
+flp:educations_school_ein rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/educations_school_id
+flp:educations_school_id rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/educations_school_is_alias_of
+flp:educations_school_is_alias_of rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/educations_school_name
+flp:educations_school_name rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:string .
+
+
+###  https://flp.example.org/educations_school_resource_uri
+flp:educations_school_resource_uri rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/end_date
+flp:end_date rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/first_name
+flp:first_name rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/fjc_court_id
+flp:fjc_court_id rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/fjc_id
+flp:fjc_id rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/ftm_eid
+flp:ftm_eid rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://flp.example.org/ftm_total_received
+flp:ftm_total_received rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/has_opinion_scraper
+flp:has_opinion_scraper rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/has_oral_argument_scraper
+flp:has_oral_argument_scraper rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/has_photo
+flp:has_photo rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/id
+flp:id rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/in_use
+flp:in_use rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/is_alias_of
+flp:is_alias_of rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/judgment
+flp:judgment rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/jurisdiction
+flp:jurisdiction rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/last_name
+flp:last_name rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/middle_name
+flp:middle_name rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf foaf:name .
+
+
+###  https://flp.example.org/monetary_demand
+flp:monetary_demand rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:boolean .
+
+
+###  https://flp.example.org/multidistrict_litigation_docket_number
+flp:multidistrict_litigation_docket_number rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/nature_of_judgement
+flp:nature_of_judgement rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/nature_of_offense
+flp:nature_of_offense rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/nature_of_suit
+flp:nature_of_suit rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/office
+flp:office rdf:type owl:DatatypeProperty ;
+           owl:equivalentProperty :office ;
+           rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/origin
+flp:origin rdf:type owl:DatatypeProperty ;
+           owl:equivalentProperty :origin ;
+           rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/pacer_court_id
+flp:pacer_court_id rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/pacer_has_rss_feed
+flp:pacer_has_rss_feed rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/pacer_rss_entry_types
+flp:pacer_rss_entry_types rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/plaintiff
+flp:plaintiff rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string .
+
+
+###  https://flp.example.org/political_affiliations_date_created
+flp:political_affiliations_date_created rdf:type owl:DatatypeProperty ;
+                                        rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_end
+flp:political_affiliations_date_end rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_granularity_end
+flp:political_affiliations_date_granularity_end rdf:type owl:DatatypeProperty ;
+                                                rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_granularity_start
+flp:political_affiliations_date_granularity_start rdf:type owl:DatatypeProperty ;
+                                                  rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_modified
+flp:political_affiliations_date_modified rdf:type owl:DatatypeProperty ;
+                                         rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_date_start
+flp:political_affiliations_date_start rdf:type owl:DatatypeProperty ;
+                                      rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/political_affiliations_id
+flp:political_affiliations_id rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/political_affiliations_person
+flp:political_affiliations_person rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/political_affiliations_political_party
+flp:political_affiliations_political_party rdf:type owl:DatatypeProperty ;
+                                           rdfs:range xsd:string .
+
+
+###  https://flp.example.org/political_affiliations_resource_uri
+flp:political_affiliations_resource_uri rdf:type owl:DatatypeProperty ;
+                                        rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/political_affiliations_source
+flp:political_affiliations_source rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string .
+
+
+###  https://flp.example.org/position
+flp:position rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string .
+
+
+###  https://flp.example.org/positions
+flp:positions rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/pro_se
+flp:pro_se rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/procedural_progress
+flp:procedural_progress rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/race
+flp:race rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string .
+
+
+###  https://flp.example.org/religion
+flp:religion rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/resource_uri
+flp:resource_uri rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/section
+flp:section rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/short_name
+flp:short_name rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string .
+
+
+###  https://flp.example.org/slug
+flp:slug rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/sources_date_accessed
+flp:sources_date_accessed rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/sources_date_created
+flp:sources_date_created rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/sources_date_modified
+flp:sources_date_modified rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/sources_id
+flp:sources_id rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/sources_notes
+flp:sources_notes rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string .
+
+
+###  https://flp.example.org/sources_person
+flp:sources_person rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/sources_resource_uri
+flp:sources_resource_uri rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/sources_url
+flp:sources_url rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/start_date
+flp:start_date rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://flp.example.org/subsection
+flp:subsection rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/suffix
+flp:suffix rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/termination_class_action_status
+flp:termination_class_action_status rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/transfer_docket_number
+flp:transfer_docket_number rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/transfer_office
+flp:transfer_office rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/transfer_origin
+flp:transfer_origin rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/url
+flp:url rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:anyURI .
+
+
+###  https://flp.example.org/version
+flp:version rdf:type owl:DatatypeProperty .
+
+
+###  https://flp.example.org/year_of_tape
+flp:year_of_tape rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:integer .
+
+
+###  https://flp.example.org/bankruptcy#asset_case
+:asset_case rdf:type owl:DatatypeProperty ;
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:oneOf [ rdf:type rdf:List ;
+                                     rdf:first "n" ;
+                                     rdf:rest [ rdf:type rdf:List ;
+                                                rdf:first "y" ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                       ] ;
+            rdfs:comment "(ASSTCASE)" .
+
+
+###  https://flp.example.org/bankruptcy#avg_monthly_expenses
+:avg_monthly_expenses rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "(AVGMNTHE)" .
+
+
+###  https://flp.example.org/bankruptcy#avg_monthly_income
+:avg_monthly_income rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "(AVGMNTI)" .
+
+
+###  https://flp.example.org/bankruptcy#case_key
+:case_key rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "(CASEKEY)" .
+
+
+###  https://flp.example.org/bankruptcy#chapter_11_future_payments
+:chapter_11_future_payments rdf:type owl:DatatypeProperty ;
+                            rdfs:range [ rdf:type rdfs:Datatype ;
+                                         owl:oneOf [ rdf:type rdf:List ;
+                                                     rdf:first "no" ;
+                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                rdf:first "yes" ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                   ]
+                                       ] ;
+                            rdfs:comment "(C11FTRPAY)" .
+
+
+###  https://flp.example.org/bankruptcy#chapter_11_percent_dividend
+:chapter_11_percent_dividend rdf:type owl:DatatypeProperty ;
+                             rdfs:comment "(C11DVDND)" .
+
+
+###  https://flp.example.org/bankruptcy#circuit
+:circuit rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:anyURI ;
+         rdfs:comment "(CIRCUIT)" .
+
+
+###  https://flp.example.org/bankruptcy#closing_calendar_year
+:closing_calendar_year rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "(CLOSECY)" .
+
+
+###  https://flp.example.org/bankruptcy#closing_chapter
+:closing_chapter rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "(CLCHPT)" .
+
+
+###  https://flp.example.org/bankruptcy#closing_cmecf_version
+:closing_cmecf_version rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "(CLCMECFV)" .
+
+
+###  https://flp.example.org/bankruptcy#closing_date
+:closing_date rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "(CLOSEDT)" .
+
+
+###  https://flp.example.org/bankruptcy#closing_fiscal_year
+:closing_fiscal_year rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "(CLOSEFY)" .
+
+
+###  https://flp.example.org/bankruptcy#closing_indicator
+:closing_indicator rdf:type owl:DatatypeProperty ;
+                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                owl:oneOf [ rdf:type rdf:List ;
+                                            rdf:first "0"^^xsd:string ;
+                                            rdf:rest [ rdf:type rdf:List ;
+                                                       rdf:first "1"^^xsd:string ;
+                                                       rdf:rest rdf:nil
+                                                     ]
+                                          ]
+                              ] ;
+                   rdfs:comment "(SNAPCLOS)" .
+
+
+###  https://flp.example.org/bankruptcy#consolidated_lead_case_number
+:consolidated_lead_case_number rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "(CNSLLEAD)" .
+
+
+###  https://flp.example.org/bankruptcy#current_chapter
+:current_chapter rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "(CRNTCHP)" ,
+                              "Constraints seem to be required for these values, based on historical year filings." .
+
+
+###  https://flp.example.org/bankruptcy#current_monthly_income
+:current_monthly_income rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "(CNTMNTHI)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_closing_prose
+:debtor1_closing_prose rdf:type owl:DatatypeProperty ;
+                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                    owl:oneOf [ rdf:type rdf:List ;
+                                                rdf:first "n" ;
+                                                rdf:rest [ rdf:type rdf:List ;
+                                                           rdf:first "y" ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                  ] ;
+                       rdfs:comment "(D1PRSE)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_county
+:debtor1_county rdf:type owl:DatatypeProperty ;
+                rdfs:comment "(D1COUNTY)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_date_prose_change
+:debtor1_date_prose_change rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:dateTime ;
+                           rdfs:comment "(D1CHGDT)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_filing_prose
+:debtor1_filing_prose rdf:type owl:DatatypeProperty ;
+                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                   owl:oneOf [ rdf:type rdf:List ;
+                                               rdf:first "n" ;
+                                               rdf:rest [ rdf:type rdf:List ;
+                                                          rdf:first "y" ;
+                                                          rdf:rest rdf:nil
+                                                        ]
+                                             ]
+                                 ] ;
+                      rdfs:comment "(D1FPRSE)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_final_disposition
+:debtor1_final_disposition rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "(D1FDSP)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_final_disposition_calendar_year
+:debtor1_final_disposition_calendar_year rdf:type owl:DatatypeProperty ;
+                                         rdfs:range xsd:integer ;
+                                         rdfs:comment "(D1FDSPCY)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_final_disposition_date
+:debtor1_final_disposition_date rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:dateTime ;
+                                rdfs:comment "(D1FDSPDT)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_final_disposition_fiscal_year
+:debtor1_final_disposition_fiscal_year rdf:type owl:DatatypeProperty ;
+                                       rdfs:range xsd:integer ;
+                                       rdfs:comment "(D1FDSPFY)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor1_zip
+:debtor1_zip rdf:type owl:DatatypeProperty ;
+             rdfs:comment "(D1ZIP)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_closing_prose
+:debtor2_closing_prose rdf:type owl:DatatypeProperty ;
+                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                    owl:oneOf [ rdf:type rdf:List ;
+                                                rdf:first "n" ;
+                                                rdf:rest [ rdf:type rdf:List ;
+                                                           rdf:first "y" ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                  ] ;
+                       rdfs:comment "(D2PRSE)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_county
+:debtor2_county rdf:type owl:DatatypeProperty ;
+                rdfs:comment "(D2COUNTY)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_date_prose_change
+:debtor2_date_prose_change rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:dateTime ;
+                           rdfs:comment "(D2CHGDT)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_filing_prose
+:debtor2_filing_prose rdf:type owl:DatatypeProperty ;
+                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                   owl:oneOf [ rdf:type rdf:List ;
+                                               rdf:first "n" ;
+                                               rdf:rest [ rdf:type rdf:List ;
+                                                          rdf:first "y" ;
+                                                          rdf:rest rdf:nil
+                                                        ]
+                                             ]
+                                 ] ;
+                      rdfs:comment "(D2FPRSE)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_final_disposition
+:debtor2_final_disposition rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "(D2FDSP)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_final_disposition_calendar_year
+:debtor2_final_disposition_calendar_year rdf:type owl:DatatypeProperty ;
+                                         rdfs:range xsd:integer ;
+                                         rdfs:comment "(D2FDSPCY)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_final_disposition_date
+:debtor2_final_disposition_date rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:dateTime ;
+                                rdfs:comment "(D2FDSPDT)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_final_disposition_fiscal_year
+:debtor2_final_disposition_fiscal_year rdf:type owl:DatatypeProperty ;
+                                       rdfs:range xsd:integer ;
+                                       rdfs:comment "(D2FDSPFY)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor2_zip
+:debtor2_zip rdf:type owl:DatatypeProperty ;
+             rdfs:comment "(D2ZIP)" .
+
+
+###  https://flp.example.org/bankruptcy#debtor_type
+:debtor_type rdf:type owl:DatatypeProperty ;
+             rdfs:comment "(DBTRTYP)" .
+
+
+###  https://flp.example.org/bankruptcy#destination_case_number
+:destination_case_number rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "(DSTNCASE)" .
+
+
+###  https://flp.example.org/bankruptcy#district
+:district rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "(DISTRICT)" .
+
+
+###  https://flp.example.org/bankruptcy#docket_number
+:docket_number rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "(DOCKET)" .
+
+
+###  https://flp.example.org/bankruptcy#estimated_assets
+:estimated_assets rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "(EASST)" .
+
+
+###  https://flp.example.org/bankruptcy#estimated_creditors
+:estimated_creditors rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "(ECRDTRS)" .
+
+
+###  https://flp.example.org/bankruptcy#estimated_liabilities
+:estimated_liabilities rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "(ELBLTS)" .
+
+
+###  https://flp.example.org/bankruptcy#fee_status
+:fee_status rdf:type owl:DatatypeProperty ;
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:oneOf [ rdf:type rdf:List ;
+                                     rdf:first "c" ;
+                                     rdf:rest [ rdf:type rdf:List ;
+                                                rdf:first "i" ;
+                                                rdf:rest [ rdf:type rdf:List ;
+                                                           rdf:first "n" ;
+                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                      rdf:first "p" ;
+                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                 rdf:first "u" ;
+                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                            rdf:first "w" ;
+                                                                                            rdf:rest rdf:nil
+                                                                                          ]
+                                                                               ]
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                       ] ;
+            rdfs:comment "(FEESTS)" .
+
+
+###  https://flp.example.org/bankruptcy#filing_calendar
+:filing_calendar rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "(FILECY)" .
+
+
+###  https://flp.example.org/bankruptcy#filing_cmecf_version
+:filing_cmecf_version rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "(FLCMECFV)" .
+
+
+###  https://flp.example.org/bankruptcy#filing_date
+:filing_date rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "(FILEDATE)" .
+
+
+###  https://flp.example.org/bankruptcy#filing_fiscal_year
+:filing_fiscal_year rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "(FILEFY)" .
+
+
+###  https://flp.example.org/bankruptcy#filing_indicator
+:filing_indicator rdf:type owl:DatatypeProperty ;
+                  rdfs:range [ rdf:type rdfs:Datatype ;
+                               owl:oneOf [ rdf:type rdf:List ;
+                                           rdf:first "0"^^xsd:string ;
+                                           rdf:rest [ rdf:type rdf:List ;
+                                                      rdf:first "1"^^xsd:string ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+                             ] ;
+                  rdfs:comment "(SNAPFILE)" .
+
+
+###  https://flp.example.org/bankruptcy#generation
+:generation rdf:type owl:DatatypeProperty ;
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:oneOf [ rdf:type rdf:List ;
+                                     rdf:first "-8"^^xsd:string ;
+                                     rdf:rest [ rdf:type rdf:List ;
+                                                rdf:first "0"^^xsd:string ;
+                                                rdf:rest [ rdf:type rdf:List ;
+                                                           rdf:first "r"^^xsd:string ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                       ] ;
+            rdfs:comment "(DOCKET)" .
+
+
+###  https://flp.example.org/bankruptcy#joint_flag
+:joint_flag rdf:type owl:DatatypeProperty ;
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:oneOf [ rdf:type rdf:List ;
+                                     rdf:first "n" ;
+                                     rdf:rest [ rdf:type rdf:List ;
+                                                rdf:first "y" ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                       ] ;
+            rdfs:comment "(JOINT)" .
+
+
+###  https://flp.example.org/bankruptcy#jointly_administered_case_number
+:jointly_administered_case_number rdf:type owl:DatatypeProperty ;
+                                  rdfs:comment "(JNTLEAD)" .
+
+
+###  https://flp.example.org/bankruptcy#nature_business
+:nature_business rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "(NOB)" .
+
+
+###  https://flp.example.org/bankruptcy#nature_debt
+:nature_debt rdf:type owl:DatatypeProperty ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:oneOf [ rdf:type rdf:List ;
+                                      rdf:first "b" ;
+                                      rdf:rest [ rdf:type rdf:List ;
+                                                 rdf:first "c" ;
+                                                 rdf:rest [ rdf:type rdf:List ;
+                                                            rdf:first "o" ;
+                                                            rdf:rest rdf:nil
+                                                          ]
+                                               ]
+                                    ]
+                        ] ;
+             rdfs:comment "(NTRDBT)" .
+
+
+###  https://flp.example.org/bankruptcy#nondischargeable_debt
+:nondischargeable_debt rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "(NDSCHRGD)" .
+
+
+###  https://flp.example.org/bankruptcy#office
+:office rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:integer ;
+        rdfs:comment "(OFFICE)" .
+
+
+###  https://flp.example.org/bankruptcy#origin
+:origin rdf:type owl:DatatypeProperty ;
+        rdfs:range [ rdf:type rdfs:Datatype ;
+                     owl:oneOf [ rdf:type rdf:List ;
+                                 rdf:first "i" ;
+                                 rdf:rest [ rdf:type rdf:List ;
+                                            rdf:first "n" ;
+                                            rdf:rest [ rdf:type rdf:List ;
+                                                       rdf:first "s" ;
+                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                  rdf:first "t" ;
+                                                                  rdf:rest rdf:nil
+                                                                ]
+                                                     ]
+                                          ]
+                               ]
+                   ] ;
+        rdfs:comment "(ORIGIN)" .
+
+
+###  https://flp.example.org/bankruptcy#original_asset_case
+:original_asset_case rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "(ORGASSTCASE)" .
+
+
+###  https://flp.example.org/bankruptcy#original_debtor1_filing_prose
+:original_debtor1_filing_prose rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "(ORGD1FPRSE)" .
+
+
+###  https://flp.example.org/bankruptcy#original_debtor2_filing_prose
+:original_debtor2_filing_prose rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "(ORGD2FPRSE)" .
+
+
+###  https://flp.example.org/bankruptcy#original_estimated_assets
+:original_estimated_assets rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "(ORGEASST)" .
+
+
+###  https://flp.example.org/bankruptcy#original_estimated_creditors
+:original_estimated_creditors rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "(ORGECRDTRS)" .
+
+
+###  https://flp.example.org/bankruptcy#original_estimated_liabilities
+:original_estimated_liabilities rdf:type owl:DatatypeProperty ;
+                                rdfs:comment "(ORGELBLTS)" .
+
+
+###  https://flp.example.org/bankruptcy#original_fee_status
+:original_fee_status rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "(ORGFEESTS)" .
+
+
+###  https://flp.example.org/bankruptcy#original_filing_chapter
+:original_filing_chapter rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "(ORGFLCHP)" ,
+                                      "Constraints seem to be required for these values, based on historical year filings." .
+
+
+###  https://flp.example.org/bankruptcy#original_filing_date
+:original_filing_date rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:dateTime ;
+                      rdfs:comment "(ORGFLDT)" .
+
+
+###  https://flp.example.org/bankruptcy#original_nature_debt
+:original_nature_debt rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "(ORGNTRDBT)" ,
+                                   "See Nature of Debt." .
+
+
+###  https://flp.example.org/bankruptcy#pending_indicator
+:pending_indicator rdf:type owl:DatatypeProperty ;
+                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                owl:oneOf [ rdf:type rdf:List ;
+                                            rdf:first "0"^^xsd:string ;
+                                            rdf:rest [ rdf:type rdf:List ;
+                                                       rdf:first "1"^^xsd:string ;
+                                                       rdf:rest rdf:nil
+                                                     ]
+                                          ]
+                              ] ;
+                   rdfs:comment "(SNAPEND)" .
+
+
+###  https://flp.example.org/bankruptcy#personal_property
+:personal_property rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "(PERSPROP)" .
+
+
+###  https://flp.example.org/bankruptcy#prepackaged_case
+:prepackaged_case rdf:type owl:DatatypeProperty ;
+                  rdfs:range [ rdf:type rdfs:Datatype ;
+                               owl:oneOf [ rdf:type rdf:List ;
+                                           rdf:first "B" ;
+                                           rdf:rest [ rdf:type rdf:List ;
+                                                      rdf:first "N" ;
+                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                 rdf:first "P" ;
+                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                            rdf:first "Y" ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ]
+                             ] ;
+                  rdfs:comment "(PREPACK)" .
+
+
+###  https://flp.example.org/bankruptcy#prior_filing
+:prior_filing rdf:type owl:DatatypeProperty ;
+              rdfs:range [ rdf:type rdfs:Datatype ;
+                           owl:oneOf [ rdf:type rdf:List ;
+                                       rdf:first "no" ;
+                                       rdf:rest [ rdf:type rdf:List ;
+                                                  rdf:first "yes" ;
+                                                  rdf:rest rdf:nil
+                                                ]
+                                     ]
+                         ] ;
+              rdfs:comment "(PRFILE)" .
+
+
+###  https://flp.example.org/bankruptcy#real_property
+:real_property rdf:type owl:DatatypeProperty ;
+               rdfs:comment "(REALPROP)" .
+
+
+###  https://flp.example.org/bankruptcy#secured_claims
+:secured_claims rdf:type owl:DatatypeProperty ;
+                rdfs:comment "(SECURED)" .
+
+
+###  https://flp.example.org/bankruptcy#sequence
+:sequence rdf:type owl:DatatypeProperty ;
+          rdfs:range [ rdf:type rdfs:Datatype ;
+                       owl:oneOf [ rdf:type rdf:List ;
+                                   rdf:first "0"^^xsd:string ;
+                                   rdf:rest [ rdf:type rdf:List ;
+                                              rdf:first "1"^^xsd:string ;
+                                              rdf:rest [ rdf:type rdf:List ;
+                                                         rdf:first "2"^^xsd:string ;
+                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                    rdf:first "3"^^xsd:string ;
+                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                               rdf:first "4"^^xsd:string ;
+                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                          rdf:first "5"^^xsd:string ;
+                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                     rdf:first "6"^^xsd:string ;
+                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                rdf:first "7"^^xsd:string ;
+                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                           rdf:first "8"^^xsd:string ;
+                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                      rdf:first "9"^^xsd:string ;
+                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                    ]
+                                                                                                                         ]
+                                                                                                              ]
+                                                                                                   ]
+                                                                                        ]
+                                                                             ]
+                                                                  ]
+                                                       ]
+                                            ]
+                                 ]
+                     ] .
+
+
+###  https://flp.example.org/bankruptcy#small_business_debtor
+:small_business_debtor rdf:type owl:DatatypeProperty ;
+                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                    owl:oneOf [ rdf:type rdf:List ;
+                                                rdf:first "n" ;
+                                                rdf:rest [ rdf:type rdf:List ;
+                                                           rdf:first "y" ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                  ] ;
+                       rdfs:comment "(SMLLBUS)" .
+
+
+###  https://flp.example.org/bankruptcy#snapshot_period
+:snapshot_period rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "(SNAPSHOT)" .
+
+
+###  https://flp.example.org/bankruptcy#source_case_number
+:source_case_number rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "(SRCCASE)" .
+
+
+###  https://flp.example.org/bankruptcy#tax_exempt
+:tax_exempt rdf:type owl:DatatypeProperty ;
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:oneOf [ rdf:type rdf:List ;
+                                     rdf:first "no" ;
+                                     rdf:rest [ rdf:type rdf:List ;
+                                                rdf:first "yes" ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                       ] ;
+            rdfs:comment "(TAXEXEMPT)" .
+
+
+###  https://flp.example.org/bankruptcy#total_assets
+:total_assets rdf:type owl:DatatypeProperty ;
+              rdfs:comment "(TOTASSTS)" .
+
+
+###  https://flp.example.org/bankruptcy#total_debt
+:total_debt rdf:type owl:DatatypeProperty ;
+            rdfs:comment "(TOTDBT)" .
+
+
+###  https://flp.example.org/bankruptcy#total_debt_discharged
+:total_debt_discharged rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "(DSCHRGD)" .
+
+
+###  https://flp.example.org/bankruptcy#total_liabilities
+:total_liabilities rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "(TOTLBLTS)" .
+
+
+###  https://flp.example.org/bankruptcy#type_case
+:type_case rdf:type owl:DatatypeProperty ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:oneOf [ rdf:type rdf:List ;
+                                    rdf:first "i" ;
+                                    rdf:rest [ rdf:type rdf:List ;
+                                               rdf:first "v" ;
+                                               rdf:rest rdf:nil
+                                             ]
+                                  ]
+                      ] ;
+           rdfs:comment "(CASETYP)" .
+
+
+###  https://flp.example.org/bankruptcy#unsecured_nonpriority_claims
+:unsecured_nonpriority_claims rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "(UNSECNPR)" .
+
+
+###  https://flp.example.org/bankruptcy#unsecured_priority_claims
+:unsecured_priority_claims rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "(UNSECPR)" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Organization
+schema:Organization rdf:type owl:Class .
+
+
+###  http://schema.org/Person
+schema:Person rdf:type owl:Class .
+
+
+###  https://flp.example.org/Attorney
+flp:Attorney rdf:type owl:Class ;
+             rdfs:subClassOf schema:Person .
+
+
+###  https://flp.example.org/Bankruptcy_Court
+flp:Bankruptcy_Court rdf:type owl:Class ;
+                     rdfs:subClassOf :Courts .
+
+
+###  https://flp.example.org/Circuit_Court
+flp:Circuit_Court rdf:type owl:Class ;
+                  rdfs:subClassOf :Courts .
+
+
+###  https://flp.example.org/Courts
+flp:Courts rdf:type owl:Class ;
+           rdfs:subClassOf schema:Organization .
+
+
+###  https://flp.example.org/Defendant
+flp:Defendant rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Class ;
+                                owl:unionOf ( schema:Organization
+                                              schema:Person
+                                            )
+                              ] .
+
+
+###  https://flp.example.org/FJC_IDB_Resource
+flp:FJC_IDB_Resource rdf:type owl:Class ;
+                     rdfs:comment "FJC Integrated Database Instance Data"@en .
+
+
+###  https://flp.example.org/Judge
+flp:Judge rdf:type owl:Class ;
+          rdfs:subClassOf schema:Person .
+
+
+###  https://flp.example.org/Law_Firm
+flp:Law_Firm rdf:type owl:Class ;
+             rdfs:subClassOf schema:Organization .
+
+
+###  https://flp.example.org/Plaintiff
+flp:Plaintiff rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Class ;
+                                owl:unionOf ( schema:Organization
+                                              schema:Person
+                                            )
+                              ] .
+
+
+###  https://flp.example.org/bankruptcy#Courts
+:Courts rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

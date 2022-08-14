@@ -1,0 +1,308 @@
+@prefix : <https://flp.example.org/courts#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix flp: <https://flp.example.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@base <https://flp.example.org/courts#> .
+
+<https://flp.example.org/courts#> rdf:type owl:Ontology, dctype:Dataset ;
+                                   owl:imports flp: ;
+                                   dcterms:description "Dataset sample of the Free Law Project." ;    
+                                   vann:preferredNamespacePrefix  "courts" ;
+                                   vann:preferredNamespaceUri     "https://flp.example.org/courts#" .
+
+###  https://flp.example.org/case#
+<https://flp.example.org/courts#> rdf:type owl:NamedIndividual ,
+                                           dctype:Dataset .
+
+###  http://purl.org/dc/dcmitype/Dataset
+dctype:Dataset rdf:type owl:Class .
+
+
+:scotus  flp:url                       "http://supremecourt.gov/" ;
+        flp:citation_string            "SCOTUS" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        dcterms:modified               "2014-10-31T01:59:15Z"^^xsd:dateTime ;
+        flp:full_name                  "Supreme Court of the United States" ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/scotus/> ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:short_name                 "Supreme Court" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:jurisdiction               "F" ;
+        flp:position                   "1" ;
+        rdf:type                       flp:Courts ;
+        flp:start_date                 "1789-09-24T00:00Z"^^xsd:dateTime .
+
+:ca1    flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca1/> ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:position                   "101" ;
+        flp:short_name                 "First Circuit" ;
+        rdf:type                       flp:Courts ;
+        flp:citation_string            "1st Cir." ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        dcterms:modified               "2019-02-06T19:46:46Z"^^xsd:dateTime ;
+        flp:fjc_court_id               "1"^^xsd:integer ;
+        flp:pacer_court_id             "1"^^xsd:integer ;
+        flp:full_name                  "Court of Appeals for the First Circuit" ;
+        flp:jurisdiction               "F" ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:url                        "http://www.ca1.uscourts.gov/" .
+
+:ca2    flp:jurisdiction               "F" ;
+        flp:pacer_court_id             "2"^^xsd:integer ;
+        flp:fjc_court_id               "2"^^xsd:integer ;
+        flp:url                        "http://www.ca2.uscourts.gov/" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        flp:citation_string            "2d Cir." ;
+        flp:full_name                  "Court of Appeals for the Second Circuit" ;
+        rdf:type                       flp:Courts ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca2/> ;
+        flp:position                   "102" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:short_name                 "Second Circuit" ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        dcterms:modified               "2019-02-06T19:47:22Z"^^xsd:dateTime .
+
+:ca3    rdf:type                       flp:Courts ;
+        flp:url                        "http://www.ca3.uscourts.gov/" ;
+        dcterms:modified               "2019-02-06T19:47:38Z"^^xsd:dateTime ;
+        flp:short_name                 "Third Circuit" ;
+        flp:citation_string            "3rd Cir." ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca3/> ;
+        flp:position                   "103" ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        flp:jurisdiction               "F" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:fjc_court_id               "3"^^xsd:integer ;
+        flp:pacer_court_id             "3"^^xsd:integer ;
+        flp:full_name                  "Court of Appeals for the Third Circuit" .
+
+:ca4    flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        flp:url                        "http://www.ca4.uscourts.gov/" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:position                   "104" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca4/> ;
+        flp:full_name                  "Court of Appeals for the Fourth Circuit" ;
+        flp:short_name                 "Fourth Circuit" ;
+        dcterms:modified               "2019-02-06T19:47:47Z"^^xsd:dateTime ;
+        flp:jurisdiction               "F" ;
+        flp:fjc_court_id               "4"^^xsd:integer ;
+        rdf:type                       flp:Courts ;
+        flp:pacer_court_id             "4"^^xsd:integer ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:citation_string            "4th Cir." .
+
+:ca5    flp:citation_string            "5th Cir." ;
+        flp:full_name                  "Court of Appeals for the Fifth Circuit" ;
+        flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        rdf:type                       flp:Courts ;
+        flp:jurisdiction               "F" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:url                        "http://www.ca5.uscourts.gov/" ;
+        flp:position                   "105" ;
+        flp:short_name                 "Fifth Circuit" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:pacer_court_id             "5"^^xsd:integer ;
+        flp:fjc_court_id               "5"^^xsd:integer ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca5/> ;
+        dcterms:modified               "2019-02-06T19:47:59Z"^^xsd:dateTime .
+
+:ca6    flp:pacer_court_id             "6"^^xsd:integer ;
+        flp:short_name                 "Sixth Circuit" ;
+        flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        flp:fjc_court_id               "6"^^xsd:integer ;
+        flp:citation_string            "6th Cir." ;
+        flp:url                        "http://www.ca6.uscourts.gov/" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca6/> ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        rdf:type                       flp:Courts ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:position                   "106" ;
+        flp:full_name                  "Court of Appeals for the Sixth Circuit" ;
+        flp:jurisdiction               "F" ;
+        dcterms:modified               "2019-02-06T19:48:11Z"^^xsd:dateTime .
+
+:ca7    flp:pacer_court_id             "7"^^xsd:integer ;
+        flp:fjc_court_id               "7"^^xsd:integer ;
+        dcterms:modified               "2019-02-06T19:48:20Z"^^xsd:dateTime ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:position                   "107" ;
+        flp:jurisdiction               "F" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:full_name                  "Court of Appeals for the Seventh Circuit" ;
+        flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        flp:url                        "http://www.ca7.uscourts.gov/" ;
+        rdf:type                       flp:Courts ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca7/> ;
+        flp:short_name                 "Seventh Circuit" ;
+        flp:citation_string            "7th Cir." .
+
+:ca8    flp:pacer_court_id             "8"^^xsd:integer ;
+        flp:short_name                 "Eighth Circuit" ;
+        flp:position                   "108" ;
+        flp:url                        "http://www.ca8.uscourts.gov/" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca8/> ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        rdf:type                       flp:Courts ;
+        flp:full_name                  "Court of Appeals for the Eighth Circuit" ;
+        flp:jurisdiction               "F" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:citation_string            "8th Cir." ;
+        flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        dcterms:modified               "2019-02-06T19:48:33Z"^^xsd:dateTime ;
+        flp:fjc_court_id               "8"^^xsd:integer .
+
+:ca9    flp:position                   "109" ;
+        flp:start_date                 "1891-03-03T00:00Z"^^xsd:dateTime ;
+        flp:short_name                 "Ninth Circuit" ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        rdf:type                       flp:Courts ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca9/> ;
+        flp:jurisdiction               "F" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:citation_string            "9th Cir." ;
+        flp:full_name                  "Court of Appeals for the Ninth Circuit" ;
+        flp:fjc_court_id               "9"^^xsd:integer ;
+        dcterms:modified               "2019-02-06T19:48:49Z"^^xsd:dateTime ;
+        flp:url                        "http://www.ca9.uscourts.gov/" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:pacer_court_id             "9"^^xsd:integer .
+
+:ca10   flp:citation_string            "10th Cir." ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        dcterms:modified               "2019-02-06T19:49:01Z"^^xsd:dateTime ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca10/> ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:full_name                  "Court of Appeals for the Tenth Circuit" ;
+        flp:start_date                 "1929-02-28T00:00Z"^^xsd:dateTime ;
+        flp:pacer_court_id             "10"^^xsd:integer ;
+        flp:url                        "http://www.ca10.uscourts.gov/" ;
+        flp:position                   "110" ;
+        flp:short_name                 "Tenth Circuit" ;
+        flp:jurisdiction               "F" ;
+        rdf:type                       flp:Courts ;
+        flp:fjc_court_id               "10"^^xsd:integer .
+
+:ca11   flp:start_date                 "1980-10-14T00:00Z"^^xsd:dateTime ;
+        flp:jurisdiction               "F" ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/ca11/> ;
+        dcterms:modified               "2019-02-06T19:49:13Z"^^xsd:dateTime ;
+        flp:citation_string            "11th Cir." ;
+        flp:short_name                 "Eleventh Circuit" ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:position                   "111" ;
+        flp:url                        "http://www.ca11.uscourts.gov/" ;
+        flp:pacer_court_id             "11"^^xsd:integer ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:fjc_court_id               "11"^^xsd:integer ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:full_name                  "Court of Appeals for the Eleventh Circuit" ;
+        rdf:type                       flp:Courts .
+
+:cafc   flp:pacer_court_id             "13"^^xsd:integer ;
+        flp:start_date                 "1982-04-02T00:00Z"^^xsd:dateTime ;
+        dcterms:modified               "2019-02-06T19:50:57Z"^^xsd:dateTime ;
+        flp:url                        "http://www.cafc.uscourts.gov/" ;
+        flp:short_name                 "Federal Circuit" ;
+        flp:has_oral_argument_scraper  "true"^^xsd:boolean ;
+        flp:jurisdiction               "F" ;
+        flp:full_name                  "Court of Appeals for the Federal Circuit" ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/cafc/> ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:position                   "113" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:citation_string            "Fed. Cir." ;
+        rdf:type                       flp:Courts .
+
+:bap1   flp:jurisdiction               "FBP" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        rdf:type                       flp:Courts ;
+        flp:url                        "http://www.bap1.uscourts.gov/" ;
+        flp:full_name                  "Bankruptcy Appellate Panel of the First Circuit" ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/bap1/> ;
+        flp:position                   "150" ;
+        dcterms:modified               "2013-10-25T01:27:23Z"^^xsd:dateTime ;
+        flp:has_opinion_scraper        "false"^^xsd:boolean ;
+        flp:citation_string            "1st Cir. BAP" ;
+        flp:short_name                 "First Circuit" ;
+        flp:has_oral_argument_scraper  "false"^^xsd:boolean .
+
+:bap2   flp:has_opinion_scraper        "false"^^xsd:boolean ;
+        flp:short_name                 "Second Circuit" ;
+        flp:full_name                  "Bankruptcy Appellate Panel of the Second Circuit" ;
+        flp:jurisdiction               "FBP" ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/bap2/> ;
+        rdf:type                       flp:Courts ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:url                        "http://www.bap2.uscourts.gov/" ;
+        flp:position                   "150.1" ;
+        flp:has_oral_argument_scraper  "false"^^xsd:boolean ;
+        flp:citation_string            "2d Cir. BAP" ;
+        dcterms:modified               "2013-10-25T01:28:18Z"^^xsd:dateTime .
+
+:bap6   flp:position                   "152" ;
+        flp:has_opinion_scraper        "false"^^xsd:boolean ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/bap6/> ;
+        flp:citation_string            "6th Cir. BAP" ;
+        dcterms:modified               "2013-10-25T01:28:23Z"^^xsd:dateTime ;
+        flp:short_name                 "Sixth Circuit" ;
+        flp:url                        "http://www.bap6.uscourts.gov/" ;
+        flp:full_name                  "Bankruptcy Appellate Panel of the Sixth Circuit" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:has_oral_argument_scraper  "false"^^xsd:boolean ;
+        flp:jurisdiction               "FBP" ;
+        rdf:type                       flp:Courts .
+
+:bap8   flp:short_name                 "Eighth Circuit" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:url                        "http://www.ca8.uscourts.gov/bankruptcy-appellate-panel" ;
+        flp:citation_string            "8th Cir. BAP" ;
+        flp:has_oral_argument_scraper  "false"^^xsd:boolean ;
+        flp:full_name                  "United States Bankruptcy Appellate Panel for the Eighth Circuit" ;
+        rdf:type                       flp:Courts ;
+        flp:position                   "153" ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/bap8/> ;
+        flp:jurisdiction               "FBP" ;
+        flp:has_opinion_scraper        "false"^^xsd:boolean ;
+        dcterms:modified               "2013-10-25T01:28:29Z"^^xsd:dateTime .
+
+:bap9   flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/bap9/> ;
+        flp:has_oral_argument_scraper  "false"^^xsd:boolean ;
+        flp:url                        "http://www.ca9.uscourts.gov/bap/" ;
+        flp:in_use                     "true"^^xsd:boolean ;
+        flp:position                   "154" ;
+        flp:citation_string            "9th Cir. BAP" ;
+        dcterms:modified               "2013-10-25T01:28:35Z"^^xsd:dateTime ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        rdf:type                       flp:Courts ;
+        flp:jurisdiction               "FBP" ;
+        flp:short_name                 "Ninth Circuit" ;
+        flp:full_name                  "United States Bankruptcy Appellate Panel for the Ninth Circuit" .
+
+:bap10  flp:position                   "154.1" ;
+        flp:full_name                  "Bankruptcy Appellate Panel of the Tenth Circuit" ;
+        flp:jurisdiction               "FBP" ;
+        flp:citation_string            "10th Cir. BAP" ;
+        rdf:type                       flp:Courts ;
+        flp:resource_uri               <https://www.courtlistener.com/api/rest/v3/courts/bap10/> ;
+        flp:has_oral_argument_scraper  "false"^^xsd:boolean ;
+        dcterms:modified               "2014-09-02T22:59:57Z"^^xsd:dateTime ;
+        flp:short_name                 "Tenth Circuit" ;
+        flp:url                        "http://www.bap10.uscourts.gov/" ;
+        flp:has_opinion_scraper        "true"^^xsd:boolean ;
+        flp:in_use                     "true"^^xsd:boolean .

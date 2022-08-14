@@ -1,0 +1,9 @@
+# courts list
+
+
+PREFIX flp: <https://flp.example.org/>
+
+SELECT DISTINCT ?s ?label
+WHERE {
+	?s flp:short_name ?label .
+}
