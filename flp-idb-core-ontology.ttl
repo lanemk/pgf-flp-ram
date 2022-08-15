@@ -13,6 +13,7 @@
 
 <https://flp.example.org/> rdf:type owl:Ontology ;
                             dcterms:description "Ontology of databases of the Free Law Project." ;
+                            vann:preferredNamespacePrefix  "flp" ;
                             vann:preferredNamespaceUri "https://flp.example.org/" .
 
 #################################################################
