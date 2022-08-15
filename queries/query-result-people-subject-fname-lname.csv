@@ -1,17 +1,17 @@
-s,first_name,family_name
-https://flp.example.org/people#people-16206,Joseph,Fisher
-https://flp.example.org/people#people-16205,Lori,Hockett
-https://flp.example.org/people#people-16207,James,Teel
-https://flp.example.org/people#people-16188,Christopher,Wolfe
-https://flp.example.org/people#people-16190,Dana,Womack
-https://flp.example.org/people#people-16191,James,Womack
-https://flp.example.org/people#people-16192,Douglas,Woodburn
-https://flp.example.org/people#people-16193,Garland,Woodward
-https://flp.example.org/people#people-16195,Baylor,Wortham
-https://flp.example.org/people#people-16197,Lindsey,Wynne
-https://flp.example.org/people#people-16198,Ashley,Wysocki
-https://flp.example.org/people#people-16199,Timothy,Yeats
-https://flp.example.org/people#people-16200,Tina,Yoo Clinton
-https://flp.example.org/people#people-16201,John,Youngblood
-https://flp.example.org/people#people-16202,Gerald,Zimmerer
-https://flp.example.org/people#people-16204,Danah,Zirpoli
+s,first_name,family_name,full_name
+https://flp.example.org/people#people-16206,Joseph,Fisher,Joseph Fisher
+https://flp.example.org/people#people-16205,Lori,Hockett,Lori Hockett
+https://flp.example.org/people#people-16207,James,Teel,James Teel
+https://flp.example.org/people#people-16188,Christopher,Wolfe,Christopher Wolfe
+https://flp.example.org/people#people-16190,Dana,Womack,Dana Womack
+https://flp.example.org/people#people-16191,James,Womack,James Womack
+https://flp.example.org/people#people-16192,Douglas,Woodburn,Douglas Woodburn
+https://flp.example.org/people#people-16193,Garland,Woodward,Garland Woodward
+https://flp.example.org/people#people-16195,Baylor,Wortham,Baylor Wortham
+https://flp.example.org/people#people-16197,Lindsey,Wynne,Lindsey Wynne
+https://flp.example.org/people#people-16198,Ashley,Wysocki,Ashley Wysocki
+https://flp.example.org/people#people-16199,Timothy,Yeats,Timothy Yeats
+https://flp.example.org/people#people-16200,Tina,Yoo Clinton,Tina Yoo Clinton
+https://flp.example.org/people#people-16201,John,Youngblood,John Youngblood
+https://flp.example.org/people#people-16202,Gerald,Zimmerer,Gerald Zimmerer
+https://flp.example.org/people#people-16204,Danah,Zirpoli,Danah Zirpoli
